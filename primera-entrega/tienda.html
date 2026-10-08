@@ -21,6 +21,187 @@
         </nav>
         <a href="club.html" class="boton-sesion">Ingresar</a>
       </header>
+      <main class="seccion">
+        <div class="encabezado-pagina">
+          <p class="subtitulo">Tienda</p>
+          <h2 class="titulo-grande">Nuestros peluches bioluminiscentes</h2>
+          <p class="encabezado-texto">
+            Escribí cuántos peluches querés comprar (de 1 a 100) y calculá el
+            total de uno solo o de todo tu pedido. El envío es sin cargo en
+            compras desde $60: si no, cuesta $8.
+          </p>
+        </div>
+        <section class="grilla" aria-label="Peluches">
+          <article class="panel tarjeta">
+            <img
+              class="tarjeta-imagen"
+              src="Imagenes/peluche-orca.jpg"
+              alt="Peluche de una orca"
+            />
+            <div class="tarjeta-cuerpo">
+              <h3 class="tarjeta-titulo">Peluche Orca del Abismo</h3>
+              <p class="producto-precio">$26.00</p>
+              <div class="campo-cantidad">
+                <label for="cantidad-1">Cantidad</label>
+                <input
+                  type="text"
+                  id="cantidad-1"
+                  size="3"
+                  maxlength="3"
+                  placeholder="Ej: 2"
+                  inputmode="numeric"
+                />
+              </div>
+              <button type="button" class="boton">Calcular total</button>
+            </div>
+          </article>
+          <article class="panel tarjeta">
+            <img
+              class="tarjeta-imagen"
+              src="Imagenes/peluche-delfin.jpg"
+              alt="Peluche de un delfín"
+            />
+            <div class="tarjeta-cuerpo">
+              <h3 class="tarjeta-titulo">Peluche Delfín Azul</h3>
+              <p class="producto-precio">$18.99</p>
+              <div class="campo-cantidad">
+                <label for="cantidad-2">Cantidad</label>
+                <input
+                  type="text"
+                  id="cantidad-2"
+                  size="3"
+                  maxlength="3"
+                  placeholder="Ej: 2"
+                  inputmode="numeric"
+                />
+              </div>
+              <button type="button" class="boton">Calcular total</button>
+            </div>
+          </article>
+          <article class="panel tarjeta">
+            <img
+              class="tarjeta-imagen"
+              src="Imagenes/peluche-dumbo.jpg"
+              alt="Peluche de un pulpo dumbo rosa"
+            />
+            <div class="tarjeta-cuerpo">
+              <h3 class="tarjeta-titulo">Peluche Pulpo Dumbo</h3>
+              <p class="producto-precio">$24.99</p>
+              <div class="campo-cantidad">
+                <label for="cantidad-3">Cantidad</label>
+                <input
+                  type="text"
+                  id="cantidad-3"
+                  size="3"
+                  maxlength="3"
+                  placeholder="Ej: 2"
+                  inputmode="numeric"
+                />
+              </div>
+              <button type="button" class="boton">Calcular total</button>
+            </div>
+          </article>
+          <article class="panel tarjeta">
+            <img
+              class="tarjeta-imagen"
+              src="Imagenes/peluche-medusa.jpg"
+              alt="Peluche de una medusa lila con brillo"
+            />
+            <div class="tarjeta-cuerpo">
+              <h3 class="tarjeta-titulo">Peluche Medusa Brillo</h3>
+              <p class="producto-precio">$20.00</p>
+              <div class="campo-cantidad">
+                <label for="cantidad-4">Cantidad</label>
+                <input
+                  type="text"
+                  id="cantidad-4"
+                  size="3"
+                  maxlength="3"
+                  placeholder="Ej: 2"
+                  inputmode="numeric"
+                />
+              </div>
+              <button type="button" class="boton">Calcular total</button>
+            </div>
+          </article>
+          <article class="panel tarjeta">
+            <img
+              class="tarjeta-imagen"
+              src="Imagenes/peluche-payaso.jpg"
+              alt="Peluche de un pez payaso"
+            />
+            <div class="tarjeta-cuerpo">
+              <h3 class="tarjeta-titulo">Peluche Pez Payaso</h3>
+              <p class="producto-precio">$17.50</p>
+              <div class="campo-cantidad">
+                <label for="cantidad-5">Cantidad</label>
+                <input
+                  type="text"
+                  id="cantidad-5"
+                  size="3"
+                  maxlength="3"
+                  placeholder="Ej: 2"
+                  inputmode="numeric"
+                />
+              </div>
+              <button type="button" class="boton">Calcular total</button>
+            </div>
+          </article>
+          <article class="panel tarjeta">
+            <img
+              class="tarjeta-imagen"
+              src="Imagenes/peluche-tortuga.jpg"
+              alt="Peluche de una tortuga marina"
+            />
+            <div class="tarjeta-cuerpo">
+              <h3 class="tarjeta-titulo">Peluche Tortuga Marina</h3>
+              <p class="producto-precio">$22.50</p>
+              <div class="campo-cantidad">
+                <label for="cantidad-6">Cantidad</label>
+                <input
+                  type="text"
+                  id="cantidad-6"
+                  size="3"
+                  maxlength="3"
+                  placeholder="Ej: 2"
+                  inputmode="numeric"
+                />
+              </div>
+              <button type="button" class="boton">Calcular total</button>
+            </div>
+          </article>
+        </section>
+        <section class="panel pedido">
+          <h3>Total del pedido</h3>
+          <p>
+            Completá la cantidad de cada peluche que quieras llevar (los que se
+            dejan vacío no se incluyen) y se calcula el total del pedido.
+          </p>
+          <button type="button" class="boton">Calcular total del pedido</button>
+        </section>
+      </main>
+      <footer class="pie">
+        <p class="pie-titulo">Abismo Azul</p>
+        <p>Mostrando los secretos mejor guardados de nuestro planeta azul.</p>
+        <div class="pie-columnas">
+          <nav class="pie-columna" aria-label="Explorar">
+            <h3>Explorar</h3>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#zona-1">Especies</a>
+            <a href="index.html#zona-4">Profundidades</a>
+          </nav>
+          <nav class="pie-columna" aria-label="Servicios">
+            <h3>Servicios</h3>
+            <a href="tienda.html">Tienda de peluches</a>
+            <a href="club.html">Club Exclusivo</a>
+            <a href="contacto.html">Contacto</a>
+          </nav>
+        </div>
+        <p class="pie-creditos">
+          © 2026 Florencia Rotondi Michelfelder. Todos los derechos reservados.
+        </p>
+      </footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

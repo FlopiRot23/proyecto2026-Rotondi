@@ -75,8 +75,8 @@
 ## Imágenes
 
 - [ ] Debe contener por lo menos una etiqueta `<img>` en la página.
-- [ ] Todas las imágenes deben ser incluidas en el repositorio dentro de una carpeta llamada **imagenes** (salvo que sean demasiado pesadas. En ese caso, se puede emplear un servidor externo).
-- [ ] No se deben subir videos en el repositorio (excepto que sean MUY livianos).
+- [x] Todas las imágenes deben ser incluidas en el repositorio dentro de una carpeta llamada **imagenes** (salvo que sean demasiado pesadas. En ese caso, se puede emplear un servidor externo).
+- [x] No se deben subir videos en el repositorio (excepto que sean MUY livianos).
 - [ ] Toda imagen debe tener su atributo alt
 - [ ] Las imágenes deben poseer un nombre representativo
 

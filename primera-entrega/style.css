@@ -1,14 +1,874 @@
 :root {
   --fondo: #010408;
   --oscuro: #020b14;
-  --panel: rgba(11, 29, 40, 0.9);
+  --panel: #0b1d28;
   --borde: #1e3f4e;
-  --celeste: #00e5ff;
-  --celeste-claro: #5cefff;
+  --cian: #00e5ff;
   --suave: #8aa3b5;
   --verde: #39ff14;
-  --rosa: #ff1493;
-  --lila: #e040fb;
-  --fuente-titulo: "Playfair Display", Georgia, serif;
-  --fuente-texto: Inter, system-ui, sans-serif;
+  --violeta: #e040fb;
+  --titulo: "Playfair Display", Georgia, serif;
+}
+
+/* base */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: white;
+  font-family: Inter, sans-serif;
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+dl,
+dd,
+ul {
+  margin: 0;
+}
+
+h2,
+h3,
+h4 {
+  font-family: var(--titulo);
+  line-height: 1.1;
+}
+
+h3,
+h4 {
+  font-size: 24px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: var(--cian);
+  text-decoration: none;
+}
+
+a:hover,
+button:hover {
+  opacity: 0.8;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+/* cajas en columna */
+.pagina,
+.tarjeta,
+.tarjeta-cuerpo,
+.integrante,
+.indicador,
+.encabezado-pagina,
+.encabezado-centrado,
+.zona-titulos,
+.articulo,
+.plan,
+.contacto-panel,
+.club-comparacion,
+.campo,
+.campo-cantidad,
+.formulario,
+.pedido,
+.datos-contacto,
+.redes,
+.invitacion,
+.portada,
+.pie-columna,
+.seccion,
+.zona-epipelagica,
+.zona-mesopelagica,
+.zona-batipelagica,
+.zona-abisopelagica {
+  display: flex;
+  flex-direction: column;
+}
+
+.pagina {
+  min-height: 100vh;
+}
+
+.campo,
+.campo-cantidad {
+  gap: 8px;
+}
+
+.encabezado-pagina,
+.zona-titulos,
+.articulo,
+.pie-columna,
+.redes {
+  gap: 12px;
+}
+
+.encabezado-centrado,
+.tarjeta-cuerpo,
+.formulario,
+.pedido,
+.datos-contacto {
+  gap: 16px;
+}
+
+.contacto-panel {
+  gap: 20px;
+  padding: 32px;
+}
+
+.invitacion,
+.plan,
+.club-comparacion,
+.portada {
+  gap: 24px;
+}
+
+.zona-epipelagica,
+.zona-mesopelagica,
+.zona-batipelagica,
+.zona-abisopelagica {
+  gap: 48px;
+  padding: 100px 80px;
+}
+
+.seccion {
+  gap: 64px;
+  padding: 72px 80px 80px;
+}
+
+.encabezado-centrado,
+.invitacion,
+.indicador {
+  align-items: center;
+}
+
+.pedido,
+.portada {
+  align-items: flex-start;
+}
+
+/* cajas en fila */
+.cabecera,
+.menu,
+.logo a,
+.botones,
+.indicadores,
+.zona-encabezado,
+.club-fila,
+.contacto-fila,
+.pie,
+.pie-columnas,
+.tarjeta-titulo-fila {
+  display: flex;
+}
+
+.menu,
+.logo a,
+.indicadores,
+.pie {
+  align-items: center;
+}
+
+.zona-encabezado {
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.club-fila {
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.tarjeta-titulo-fila {
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+.botones {
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.contacto-fila {
+  gap: 24px;
+}
+
+/* paneles, tarjetas y grillas */
+.panel,
+.tabla-contenedor {
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  background: var(--panel);
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.grilla-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.tarjeta {
+  overflow: hidden;
+  color: #fff;
+}
+
+.tarjeta:hover {
+  border-color: var(--cian);
+}
+
+.tarjeta-imagen {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.tarjeta-cuerpo,
+.articulo {
+  padding: 24px;
+}
+
+.formulario-panel,
+.pedido {
+  padding: 28px;
+}
+
+.etiqueta {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.etiqueta-luz {
+  background: #06323d;
+  color: var(--cian);
+}
+
+.etiqueta-profunda {
+  background: #2a0a3a;
+  color: var(--violeta);
+}
+/* titulos y textos */
+.titulo-portada {
+  font-size: 72px;
+  line-height: 1;
+}
+
+.titulo-grande {
+  font-size: 48px;
+}
+
+.titulo-zona {
+  font-size: 40px;
+  line-height: 1;
+}
+
+.titulo-invitacion {
+  font-size: 32px;
+  text-align: center;
+  color: var(--cian);
+}
+
+.titulo-medio {
+  font-size: 28px;
+}
+
+.tarjeta-titulo,
+.integrante-nombre {
+  font-size: 22px;
+}
+
+.subtitulo,
+.articulo-codigo,
+.integrante-rol,
+.indicador p {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--cian);
+}
+
+.subtitulo {
+  font-size: 14px;
+  letter-spacing: 0.22em;
+}
+
+.integrante-rol {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+.articulo-codigo,
+.indicador p {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.indicador .indicador-numero {
+  font-family: var(--titulo);
+  font-size: 48px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #fff;
+  line-height: 1;
+}
+
+.texto-suave,
+.texto-chico,
+.encabezado-texto,
+.invitacion-texto,
+.zona-rango,
+.zona-descripcion {
+  color: var(--suave);
+}
+
+.texto-suave {
+  font-size: 15px;
+}
+
+.texto-chico {
+  font-size: 12px;
+}
+
+.encabezado-texto {
+  max-width: 680px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.invitacion-texto {
+  max-width: 600px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.encabezado-centrado {
+  text-align: center;
+}
+/* cabecera, menu y botones */
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 20px 80px;
+  background: var(--fondo);
+  border-bottom: 1px solid var(--borde);
+}
+
+.logo {
+  font-family: var(--titulo);
+  font-size: 24px;
+  font-style: italic;
+  line-height: 1;
+}
+
+.logo a {
+  gap: 16px;
+  color: #fff;
+}
+
+.logo-icono {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00e5ff, #103162);
+}
+
+.menu {
+  gap: 40px;
+}
+
+.menu a {
+  color: var(--suave);
+  padding-bottom: 4px;
+}
+
+.menu a.activo {
+  color: var(--cian);
+  border-bottom: 2px solid var(--cian);
+}
+
+.boton,
+.boton-sesion,
+.botones a,
+.invitacion a {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid var(--cian);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--cian);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.boton-sesion {
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.botones a,
+.invitacion a {
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  background: var(--cian);
+  color: var(--oscuro);
+}
+
+.boton-cian,
+.tarjeta .boton,
+.pedido .boton,
+.plan-popular .boton {
+  background: var(--cian);
+  color: var(--oscuro);
+}
+/* inicio */
+.portada {
+  justify-content: center;
+  min-height: 720px;
+  padding: 120px;
+  background-image:
+    linear-gradient(rgba(2, 11, 20, 0.4), rgba(2, 11, 20, 0.4)),
+    url("Imagenes/hero-superficie.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.portada-texto {
+  max-width: 620px;
+  font-size: 18px;
+}
+
+.zona-epipelagica {
+  background: linear-gradient(#006280, #042d3c);
+}
+
+.zona-mesopelagica {
+  background: linear-gradient(#042d3c, #021722);
+}
+
+.zona-batipelagica {
+  background: linear-gradient(#021722, #010a14);
+}
+
+.zona-abisopelagica {
+  background: var(--fondo);
+}
+
+.zona-rango {
+  font-size: 18px;
+}
+
+.zona-descripcion {
+  width: 400px;
+}
+
+.separador {
+  padding: 32px 80px;
+  font-family: var(--titulo);
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+  color: var(--suave);
+}
+
+.invitacion {
+  padding: 80px 120px;
+  background: var(--oscuro);
+  border-top: 1px solid var(--borde);
+  border-bottom: 1px solid var(--borde);
+}
+
+.indicadores {
+  gap: 64px;
+  padding: 16px 0;
+}
+/* formularios y tienda */
+.campo label,
+.campo-cantidad label {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--suave);
+}
+
+input,
+select {
+  width: 100%;
+  height: 41px;
+  padding: 0 12px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: var(--fondo);
+  color: #fff;
+  font-size: 14px;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--cian);
+  outline: none;
+}
+
+.campo-cantidad {
+  width: 100px;
+}
+
+.producto-precio,
+.resultado {
+  color: var(--cian);
+}
+
+.producto-precio {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.resultado {
+  font-size: 14px;
+}
+/* tablas */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-contenedor {
+  overflow: hidden;
+}
+
+caption {
+  padding: 20px;
+  text-align: left;
+  font-family: var(--titulo);
+  font-weight: bold;
+  color: var(--suave);
+}
+
+th,
+td {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--borde);
+  text-align: center;
+  font-size: 14px;
+}
+
+thead th {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--suave);
+}
+
+tbody th {
+  text-align: left;
+  font-weight: normal;
+}
+
+.valor-si {
+  color: var(--verde);
+}
+
+.valor-no {
+  color: var(--suave);
+}
+/*club*/
+.plan {
+  position: relative;
+  padding: 32px;
+}
+
+.plan-popular {
+  background: var(--oscuro);
+}
+
+.plan-estrella {
+  position: absolute;
+  top: -13px;
+  right: 24px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: var(--cian);
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--oscuro);
+}
+
+.plan-nombre {
+  margin-bottom: 8px;
+}
+
+.plan-precio {
+  font-family: var(--titulo);
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.plan-beneficios {
+  flex: 1;
+  padding: 24px 0 0 20px;
+  border-top: 1px solid var(--borde);
+  font-size: 14px;
+  list-style: disc;
+}
+
+.plan-beneficios li {
+  margin-bottom: 12px;
+}
+
+.formulario-panel {
+  width: 500px;
+}
+
+.panel-sesion {
+  width: 500px;
+  padding: 32px;
+}
+
+#panel-sesion {
+  border-color: var(--cian);
+}
+
+.panel-sesion p,
+.panel-sesion h3 {
+  margin-bottom: 16px;
+}
+
+.club-comparacion {
+  flex: 1;
+}
+
+.articulos h3 {
+  margin-bottom: 32px;
+}
+/*contacto*/
+.integrante {
+  overflow: hidden;
+}
+
+.avatar-0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 260px;
+  background: linear-gradient(135deg, #00e5ff, #0f5c8c);
+  font-family: var(--titulo);
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.contacto-panel {
+  flex: 1;
+}
+
+.datos-contacto dt {
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--suave);
+}
+
+.datos-contacto dd {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.redes a {
+  display: block;
+  padding: 14px 18px;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.redes a:hover {
+  border-color: var(--cian);
+}
+/* pie de pagina */
+.pie {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px 48px;
+  padding: 48px 80px;
+  border-top: 1px solid var(--borde);
+}
+
+.pie p {
+  color: var(--suave);
+}
+
+.pie .pie-titulo {
+  font-family: var(--titulo);
+  font-size: 28px;
+  font-style: italic;
+  font-weight: bold;
+  color: #fff;
+}
+
+.pie-columnas {
+  gap: 64px;
+}
+
+.pie-columna {
+  font-size: 14px;
+}
+
+.pie-columna h3 {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+}
+
+.pie-columna a {
+  color: var(--suave);
+}
+
+.pie-creditos {
+  width: 100%;
+  padding-top: 24px;
+  border-top: 1px solid var(--borde);
+  font-size: 12px;
+}
+/* celular y pantallas mas chicas */
+@media (max-width: 768px) {
+  .cabecera {
+    flex-wrap: wrap;
+    row-gap: 12px;
+    height: auto;
+    padding: 14px 20px;
+  }
+
+  .menu {
+    order: 3;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .menu a {
+    white-space: nowrap;
+  }
+
+  .seccion {
+    gap: 40px;
+    padding: 48px 20px;
+  }
+
+  .zona-epipelagica,
+  .zona-mesopelagica,
+  .zona-batipelagica,
+  .zona-abisopelagica {
+    gap: 32px;
+    padding: 56px 20px;
+  }
+
+  .invitacion {
+    padding: 56px 20px;
+  }
+
+  .separador {
+    padding: 24px 20px;
+  }
+
+  .portada {
+    min-height: 520px;
+    padding: 90px 20px;
+  }
+
+  .pie {
+    gap: 24px;
+    padding: 40px 20px;
+  }
+
+  .pie-columnas {
+    gap: 40px;
+  }
+
+  .titulo-portada {
+    font-size: 44px;
+  }
+
+  .titulo-grande {
+    font-size: 34px;
+  }
+
+  .titulo-zona {
+    font-size: 28px;
+  }
+
+  .titulo-medio {
+    font-size: 24px;
+  }
+
+  .grilla,
+  .grilla-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-imagen {
+    height: 200px;
+  }
+
+  .avatar-0 {
+    height: 200px;
+  }
+
+  .zona-encabezado,
+  .club-fila,
+  .contacto-fila {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .indicadores {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .zona-descripcion,
+  .formulario-panel,
+  .panel-sesion {
+    width: 100%;
+  }
+
+  .contacto-panel,
+  .plan {
+    padding: 24px;
+  }
+
+  th,
+  td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
 }

@@ -1,0 +1,14 @@
+:root {
+  --fondo: #010408;
+  --oscuro: #020b14;
+  --panel: rgba(11, 29, 40, 0.9);
+  --borde: #1e3f4e;
+  --celeste: #00e5ff;
+  --celeste-claro: #5cefff;
+  --suave: #8aa3b5;
+  --verde: #39ff14;
+  --rosa: #ff1493;
+  --lila: #e040fb;
+  --fuente-titulo: "Playfair Display", Georgia, serif;
+  --fuente-texto: Inter, system-ui, sans-serif;
+}

@@ -551,6 +551,20 @@ select:focus {
 .resultado {
   font-size: 14px;
 }
+.tienda {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+.tienda .grilla {
+  flex: 1;
+  grid-template-columns: 1fr 1fr;
+}
+.tienda .pedido {
+  position: sticky;
+  top: 90px;
+  width: 300px;
+}
 /* tablas */
 .tabla {
   width: 100%;
@@ -830,10 +844,17 @@ tbody th {
   }
 
   .grilla,
-  .grilla-2 {
+  .grilla-2,
+  .tienda .grilla {
     grid-template-columns: 1fr;
   }
-
+  .tienda {
+    flex-direction: column;
+  }
+  .tienda .pedido {
+    position: static;
+    width: 100%;
+  }
   .tarjeta-imagen {
     height: 200px;
   }

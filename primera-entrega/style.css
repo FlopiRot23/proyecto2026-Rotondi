@@ -7,6 +7,7 @@
   --suave: #8aa3b5;
   --verde: #39ff14;
   --violeta: #e040fb;
+  --azul-claro: #1b5e7a;
   --titulo: "Playfair Display", Georgia, serif;
 }
 
@@ -538,18 +539,33 @@ select:focus {
   width: 100px;
 }
 
-.producto-precio,
-.resultado {
-  color: var(--cian);
-}
-
 .producto-precio {
   font-size: 16px;
   font-weight: bold;
 }
 
 .resultado {
-  font-size: 14px;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--cian);
+  border-radius: 12px;
+  background: var(--azul-claro);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.resultado:empty {
+  display: none;
+}
+
+.resultado-total {
+  display: block;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--borde);
+  color: var(--verde);
+  font-size: 22px;
+  font-weight: bold;
 }
 .tienda {
   display: flex;

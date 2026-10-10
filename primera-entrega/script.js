@@ -495,13 +495,14 @@ let calcularPedido = () => {
     return;
   }
   const envio = calcularEnvio(subtotal);
-  resultado.textContent =
+  resultado.innerHTML =
     "Subtotal: $" +
     subtotal.toFixed(2) +
-    " + envío: $" +
+    "<br>Envío: $" +
     envio.toFixed(2) +
-    " = Total: $" +
-    (subtotal + envio).toFixed(2);
+    '<span class="resultado-total">Total: $' +
+    (subtotal + envio).toFixed(2) +
+    "</span>";
 };
 
 /**

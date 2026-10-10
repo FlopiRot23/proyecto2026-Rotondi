@@ -1,8 +1,8 @@
-# Abisal : Un paseo por las profundidades del océano
+# Abisal: Un paseo por las profundidades del océano
 
 Proyecto 2026 de la materia **Taller de Desarrollo Web**.
 
-## índice
+## Indice
 
 - [Autores](#autores)
 - [Link a Github Pages](#link-a-github-pages)
@@ -24,7 +24,7 @@ Incluye fichas de especies, tienda de peluches, club y contacto.
 
 ### Páginas
 
-| Pagina           | Archivo       |
+| Página           | Archivo       |
 | ---------------- | ------------- |
 | Inicio           | index.html    |
 | Ficha de especie | animal.html   |

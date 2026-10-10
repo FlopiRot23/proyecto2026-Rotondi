@@ -11,11 +11,11 @@ const ANIMALES = [
     estado: "Preocupación Menor (LC)",
     perfil: [
       {
-        etiqueta: "Rango de profundidad",
+        etiqueta: "Rango de Profundidad",
         valor: "0m - 150m (costero y oceánico)",
       },
-      { etiqueta: "Longitud máxima", valor: "Hasta 4 metros" },
-      { etiqueta: "Peso estimado", valor: "Entre 200 y 300 kg" },
+      { etiqueta: "Longitud Máxima", valor: "Hasta 4 metros" },
+      { etiqueta: "Peso Estimado", valor: "Entre 200 y 300 kg" },
       {
         etiqueta: "Hábitat",
         valor: "Aguas templadas y tropicales de todo el mundo",
@@ -134,13 +134,13 @@ const ANIMALES = [
     zona: 3,
     nombre: "Pez Linterna del Abismo",
     cientifico: "Melanocetus johnsonii",
-    rango: "1200m - 3000m",
+    rango: "1.200m - 3.000m",
     imagen: "imagenes/pez-linterna.jpg",
     resumen:
       "Su antena está repleta de bacterias simbióticas que brillan para atraer presas descuidadas hacia su boca.",
     estado: "No Evaluada (NE)",
     perfil: [
-      { etiqueta: "Rango de Profundidad", valor: "1,200m — 3,000m" },
+      { etiqueta: "Rango de Profundidad", valor: "1.200m — 3.000m" },
       {
         etiqueta: "Longitud Máxima",
         valor: "Hembras hasta 18 cm; machos 3 cm",
@@ -160,7 +160,7 @@ const ANIMALES = [
     zona: 3,
     nombre: "Calamar Gigante",
     cientifico: "Architeuthis dux",
-    rango: "1000m - 2500m",
+    rango: "1.000m - 2.500m",
     imagen: "imagenes/calamar.jpg",
     resumen:
       "Poseen los ojos más grandes del reino animal, del tamaño de platos, optimizados para detectar destellos lejanos.",
@@ -168,7 +168,7 @@ const ANIMALES = [
     perfil: [
       {
         etiqueta: "Rango de Profundidad",
-        valor: "1000m — 2500m (Principalmente batipelágico)",
+        valor: "1.000m — 2.500m (Principalmente batipelágico)",
       },
       { etiqueta: "Longitud Máxima", valor: "Hasta 13 metros (Hembras)" },
       { etiqueta: "Peso Estimado", valor: "Aproximadamente 275 kg" },
@@ -186,13 +186,13 @@ const ANIMALES = [
     zona: 3,
     nombre: "Isópodo Gigante",
     cientifico: "Bathynomus giganteus",
-    rango: "550m - 2500m",
+    rango: "550m - 2.500m",
     imagen: "imagenes/isopodo.jpg",
     resumen:
       "Un pariente agrandado de la cochinilla que limpia el fondo comiendo lo que cae desde arriba.",
     estado: "No Evaluada (NE)",
     perfil: [
-      { etiqueta: "Rango de Profundidad", valor: "550m — 2,500m" },
+      { etiqueta: "Rango de Profundidad", valor: "550m — 2.500m" },
       { etiqueta: "Longitud Máxima", valor: "Hasta 50 cm" },
       { etiqueta: "Peso Estimado", valor: "Cerca de 1,7 kg" },
       {
@@ -212,13 +212,13 @@ const ANIMALES = [
     zona: 3,
     nombre: "Tiburón de Groenlandia",
     cientifico: "Somniosus microcephalus",
-    rango: "0m - 2200m",
+    rango: "0m - 2.200m",
     imagen: "imagenes/tiburon-groenlandia.jpg",
     resumen:
       "El vertebrado más longevo que se conoce: hay ejemplares de más de tres siglos nadando hoy.",
     estado: "Vulnerable (VU)",
     perfil: [
-      { etiqueta: "Rango de Profundidad", valor: "0m — 2,200m" },
+      { etiqueta: "Rango de Profundidad", valor: "0m — 2.200m" },
       { etiqueta: "Longitud Máxima", valor: "Hasta 7 metros" },
       { etiqueta: "Peso Estimado", valor: "Más de 1.000 kg" },
       { etiqueta: "Hábitat", valor: "Aguas del Ártico y del Atlántico norte" },
@@ -235,13 +235,13 @@ const ANIMALES = [
     zona: 4,
     nombre: "Pez Gota (Blobfish)",
     cientifico: "Psychrolutes marcidus",
-    rango: "4000m - 4800m",
+    rango: "4.000m - 4.800m",
     imagen: "imagenes/pez-gota.jpg",
     resumen:
       "Fuera del agua se colapsa, pero a su profundidad natural tiene una densidad gelatinosa perfecta.",
     estado: "No Evaluada (NE)",
     perfil: [
-      { etiqueta: "Rango de Profundidad", valor: "4,000m — 4,800m" },
+      { etiqueta: "Rango de Profundidad", valor: "4.000m — 4.800m" },
       { etiqueta: "Longitud Máxima", valor: "Hasta 30 cm" },
       { etiqueta: "Peso Estimado", valor: "Cerca de 2 kg" },
       {
@@ -261,13 +261,13 @@ const ANIMALES = [
     zona: 4,
     nombre: "Pulpo Dumbo",
     cientifico: "género Grimpoteuthis",
-    rango: "4000m - 6000m",
+    rango: "4.000m - 6.000m",
     imagen: "imagenes/pulpo-dumbo.jpg",
     resumen:
       "Utilizan un par de aletas con forma de oreja para planear perezosamente en las llanuras abisales.",
     estado: "No Evaluada (NE)",
     perfil: [
-      { etiqueta: "Rango de Profundidad", valor: "4,000m — 6,000m" },
+      { etiqueta: "Rango de Profundidad", valor: "4.000m — 6.000m" },
       { etiqueta: "Longitud Máxima", valor: "Entre 20 y 30 cm" },
       { etiqueta: "Peso Estimado", valor: "Menos de 1 kg" },
       {

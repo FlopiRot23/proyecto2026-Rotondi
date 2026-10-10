@@ -52,7 +52,12 @@
               <li>Boletín mensual básico</li>
               <li>Visualizador de profundidad</li>
             </ul>
-            <a class="boton" href="">Elegir plan</a>
+            <a
+              class="boton"
+              href="#panel-registro"
+              onclick="elegirPlan('Básico')"
+              >Elegir plan</a
+            >
           </article>
           <article class="panel plan plan-popular">
             <span class="plan-estrella"> Más popular</span>
@@ -66,7 +71,12 @@
               <li>Artículos exclusivos de profundidad</li>
               <li>Acceso anticipado a los nuevos peluches</li>
             </ul>
-            <a class="boton" href="#panel-registro">Elegir plan</a>
+            <a
+              class="boton"
+              href="#panel-registro"
+              onclick="elegirPlan('Premium')"
+              >Elegir plan</a
+            >
           </article>
           <article class="panel plan">
             <div>
@@ -80,12 +90,19 @@
               <li>Detrás de escenas de los buceos mas emblemáticos</li>
               <li>Peluche exclusivo anual de regalo</li>
             </ul>
-            <a class="boton" href="">Elegir plan</a>
+            <a class="boton" href="#panel-registro" onclick="elegirPlan('VIP')"
+              >Elegir plan</a
+            >
           </article>
         </section>
         <div class="club-fila">
           <section id="panel-registro" class="panel formulario-panel">
-            <form id="formulario-registro" class="formulario">
+            <form
+              id="formulario-registro"
+              class="formulario"
+              novalidate
+              onsubmit="return iniciarSesion();"
+            >
               <h3 class="titulo-panel">Unite al Abismo</h3>
               <div class="campo">
                 <label for="registro-correo">Correo electrónico</label>
@@ -133,7 +150,11 @@
               Ya tenés acceso a las fichas profundas y al archivo de
               expediciones. Se publican dos artículos nuevos por mes.
             </p>
-            <button type="button" class="boton boton-borde">
+            <button
+              type="button"
+              class="boton boton-borde"
+              onclick="cerrarSesion()"
+            >
               Cerrar sesión
             </button>
           </section>

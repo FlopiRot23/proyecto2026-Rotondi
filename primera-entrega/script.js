@@ -1,4 +1,4 @@
-const ANIMALES = [
+let ANIMALES = [
   {
     id: "delfin",
     zona: 1,
@@ -291,7 +291,7 @@ const NOMBRES_ZONA = [
   "Zona Abisopelágica",
 ];
 
-const PELUCHES = [
+let PELUCHES = [
   { nombre: "Peluche Orca del Abismo", precio: 26 },
   { nombre: "Peluche Delfín azul", precio: 18.99 },
   { nombre: "Peluche Pulpo Dumbo", precio: 24.99 },
@@ -299,3 +299,257 @@ const PELUCHES = [
   { nombre: "Peluche Pez Payaso", precio: 17.5 },
   { nombre: "Peluche Tortuga Marina", precio: 22.5 },
 ];
+let CANTIDAD_MAXIMA = 100;
+let ENVIO_GRATIS_DESDE = 60;
+let COSTO_ENVIO = 8;
+
+/**
+ * Arma el HTML de la tarjeta de un animal
+ * @method crearTarjeta
+ * @param {object} animal - Un animal de la lista ANIMALES
+ * @return {string} El HTML de la tarjeta
+ */
+let crearTarjeta = (animal) => {
+  let clase = "etiqueta etiqueta-profunda";
+  if (animal.zona === 1) {
+    clase = "etiqueta etiqueta-luz";
+  }
+  let html =
+    '<a class="panel tarjeta" href="animal.html?id=' + animal.id + '">';
+  html +=
+    '<img class="tarjeta-imagen" src="' +
+    animal.imagen +
+    '" alt="' +
+    animal.nombre +
+    '">';
+  html += '<div class="tarjeta-cuerpo">';
+  html += '<div class="tarjeta-titulo-fila">';
+  html += '<h3 class="tarjeta-titulo">' + animal.nombre + "</h3>";
+  html += '<span class="' + clase + '">' + animal.rango + "</span>";
+  html += "</div>";
+  html += '<p class="texto-suave">' + animal.resumen + "</p>";
+  html += "</div></a>";
+  return html;
+};
+
+/**
+ * Dibuja las tarjetas de cada zona
+ * @method mostrarZonas
+ */
+let mostrarZonas = () => {
+  for (let zona = 1; zona <= 4; zona++) {
+    let html = "";
+    for (let i = 0; i < ANIMALES.length; i++) {
+      if (ANIMALES[i].zona === zona) {
+        html += crearTarjeta(ANIMALES[i]);
+      }
+    }
+    document.getElementById("grilla-zona-" + zona).innerHTML = html;
+  }
+};
+
+/**
+ * Dibuja la ficha del animal elegido en la dirección
+ * @method mostrarFicha
+ */
+let mostrarFicha = () => {
+  let id = window.location.search.replace("?id=", "");
+
+  let animal = null;
+  for (let i = 0; i < ANIMALES.length; i++) {
+    if (ANIMALES[i].id === id) {
+      animal = ANIMALES[i];
+    }
+  }
+
+  let ficha = document.getElementById("ficha");
+  if (animal === null) {
+    ficha.innerHTML = '<p class="texto-suave">No encontramos esa especie.</p>';
+    return;
+  }
+  document.title = animal.nombre + " | Abisal";
+
+  let parrafos = "";
+  for (let i = 0; i < animal.parrafos.length; i++) {
+    parrafos += '<p class="texto-suave">' + animal.parrafos[i] + "</p>";
+  }
+
+  let perfil = "";
+  for (let i = 0; i < animal.perfil.length; i++) {
+    perfil +=
+      "<div><dt>" +
+      animal.perfil[i].etiqueta +
+      "</dt><dd>" +
+      animal.perfil[i].valor +
+      "</dd></div>";
+  }
+  perfil +=
+    "<div><dt>Estado de conservación</dt><dd>" + animal.estado + "</dd></div>";
+
+  let otros = "";
+  let cantidad = 0;
+  for (let i = 0; i < ANIMALES.length; i++) {
+    if (
+      ANIMALES[i].zona === animal.zona &&
+      ANIMALES[i].id !== animal.id &&
+      cantidad < 3
+    ) {
+      otros += crearTarjeta(ANIMALES[i]);
+      cantidad++;
+    }
+  }
+
+  let zona = NOMBRES_ZONA[animal.zona];
+  let html = '<div class="encabezado-pagina">';
+  html += '<p class="subtitulo">' + zona + "</p>";
+  html += '<h2 class="titulo-grande">' + animal.nombre + "</h2>";
+  html += '<p class="encabezado-texto">' + animal.cientifico + "</p></div>";
+  html += '<section class="grilla grilla-2">';
+  html += '<article class="panel tarjeta">';
+  html +=
+    '<img class="tarjeta-imagen" src="' +
+    animal.imagen +
+    '" alt="' +
+    animal.nombre +
+    '">';
+  html += '<div class="tarjeta-cuerpo">' + parrafos + "</div></article>";
+  html +=
+    '<section class="panel contacto-panel"><h3 class="titulo-panel">Perfil de especie</h3>';
+  html += '<dl class="datos-contacto">' + perfil + "</dl></section></section>";
+  html +=
+    '<section class="panel pedido"><h3>Dato curioso</h3><p>' +
+    animal.dato +
+    "</p></section>";
+  html +=
+    '<section class="club-comparacion"><h3 class="titulo-medio">Otras criaturas de la ' +
+    zona +
+    "</h3>";
+  html += '<div class="grilla">' + otros + "</div></section>";
+  html +=
+    '<div><a class="boton" href="index.html">Volver al descenso</a></div>';
+  ficha.innerHTML = html;
+};
+
+/**
+ * Revisa que la cantidad de un campo sea un entero entre 1 y 100.
+ * @method cantidadValida
+ * @param {object} campo
+ * @return {boolean}
+ */
+let cantidadValida = (campo) => {
+  let valor = campo.value;
+  let mensaje = "";
+
+  if (valor === "" || isNaN(valor)) {
+    mensaje = "Ingresá un número.";
+  } else if (valor % 1 !== 0) {
+    mensaje = "La cantidad no puede tener decimales.";
+  } else if (valor < 1 || valor > CANTIDAD_MAXIMA) {
+    mensaje = "La cantidad tiene que estar entre 1 y " + CANTIDAD_MAXIMA + ".";
+  }
+
+  if (mensaje !== "") {
+    alert(mensaje);
+    campo.value = "";
+    campo.focus();
+    return false;
+  }
+  return true;
+};
+
+/**
+ * @method calcularEnvio
+ * @param {number} subtotal Precio de los peluches
+ * @return {number} Lo que cuesta el envío
+ */
+let calcularEnvio = (subtotal) => {
+  if (subtotal >= ENVIO_GRATIS_DESDE) {
+    return 0;
+  }
+  return COSTO_ENVIO;
+};
+
+/**
+ * Calcula el total de todos los peluches con cantidad
+ * @method calcularPedido
+ */
+let calcularPedido = () => {
+  let resultado = document.getElementById("resultado-pedido");
+  resultado.textContent = "";
+  let subtotal = 0;
+
+  for (let numero = 1; numero <= PELUCHES.length; numero++) {
+    let campo = document.getElementById("cantidad-" + numero);
+    if (campo.value !== "") {
+      if (!cantidadValida(campo)) {
+        return;
+      }
+      subtotal += campo.value * PELUCHES[numero - 1].precio;
+    }
+  }
+
+  if (subtotal === 0) {
+    alert("Ingresá la cantidad de al menos un peluche.");
+    return;
+  }
+  let envio = calcularEnvio(subtotal);
+  resultado.textContent =
+    "Subtotal: $" +
+    subtotal.toFixed(2) +
+    " + envío: $" +
+    envio.toFixed(2) +
+    " = Total: $" +
+    (subtotal + envio).toFixed(2);
+};
+
+/**
+ * Deja seleccionado en el formulario el plan que se eligió
+ * @method elegirPlan
+ * @param {string} plan  Nombre del plan
+ */
+let elegirPlan = (plan) => {
+  document.getElementById("registro-plan").value = plan;
+};
+
+/**
+ * Valida el formulario del club
+ * @method iniciarSesion
+ * @return {boolean} Siempre false, para que la página no se recargue
+ */
+let iniciarSesion = () => {
+  let correo = document.getElementById("registro-correo");
+  let clave = document.getElementById("registro-clave");
+
+  if (!correo.value.includes("@")) {
+    alert("Ingresá un correo válido.");
+    correo.value = "";
+    correo.focus();
+    return false;
+  }
+  if (clave.value.length < 6) {
+    alert("La contraseña debe tener al menos 6 caracteres.");
+    clave.value = "";
+    clave.focus();
+    return false;
+  }
+
+  document.getElementById("sesion-saludo").textContent =
+    "Bienvenido, " + correo.value.split("@")[0];
+  document.getElementById("sesion-plan").textContent =
+    "Sesión activa · Plan " + document.getElementById("registro-plan").value;
+  document.getElementById("panel-registro").hidden = true;
+  document.getElementById("panel-sesion").hidden = false;
+  document.getElementById("seccion-articulos").hidden = false;
+  return false;
+};
+
+/**
+ * Cierra la sesión y vuelve a mostrar el formulario
+ * @method cerrarSesion
+ */
+let cerrarSesion = () => {
+  document.getElementById("formulario-registro").reset();
+  document.getElementById("panel-registro").hidden = false;
+  document.getElementById("panel-sesion").hidden = true;
+  document.getElementById("seccion-articulos").hidden = true;
+};

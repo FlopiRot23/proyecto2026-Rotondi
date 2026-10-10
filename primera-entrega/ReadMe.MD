@@ -6,6 +6,7 @@ Proyecto 2026 de la materia **Taller de Desarrollo Web**.
 
 - [Autores](#autores)
 - [Link a Github Pages](#link-a-github-pages)
+- [Link al wireframe](#link-al-wireframe)
 - [Descripción](#descripción)
 - [Tecnologías usadas](#tecnologías-usadas)
 
@@ -15,7 +16,11 @@ Proyecto 2026 de la materia **Taller de Desarrollo Web**.
 
 ## Link a Github Pages
 
-[Ver sitio publicado](futuro link de github pages va acá)
+- [Ver sitio publicado](futuro link de github pages va acá)
+
+## Link al Wireframe
+
+- [Ver wireframe en Figma](https://www.figma.com/design/xpfc68Tf6dQHfvlELG9ERk/Abisal---Wireframe?node-id=10-1059&t=9EDQulIaUNfp9Okr-1)
 
 ## Descripción
 

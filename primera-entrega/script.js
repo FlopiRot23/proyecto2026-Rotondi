@@ -1,4 +1,4 @@
-let ANIMALES = [
+const ANIMALES = [
   {
     id: "delfin",
     zona: 1,
@@ -291,7 +291,7 @@ const NOMBRES_ZONA = [
   "Zona Abisopelágica",
 ];
 
-let PELUCHES = [
+const PELUCHES = [
   { nombre: "Peluche Orca del Abismo", precio: 26 },
   { nombre: "Peluche Delfín Azul", precio: 18.99 },
   { nombre: "Peluche Pulpo Dumbo", precio: 24.99 },
@@ -299,9 +299,9 @@ let PELUCHES = [
   { nombre: "Peluche Pez Payaso", precio: 17.5 },
   { nombre: "Peluche Tortuga Marina", precio: 22.5 },
 ];
-let CANTIDAD_MAXIMA = 100;
-let ENVIO_GRATIS_DESDE = 60;
-let COSTO_ENVIO = 8;
+const CANTIDAD_MAXIMA = 100;
+const ENVIO_GRATIS_DESDE = 60;
+const COSTO_ENVIO = 8;
 
 /**
  * Arma el HTML de la tarjeta de un animal
@@ -353,7 +353,7 @@ let mostrarZonas = () => {
  * @method mostrarFicha
  */
 let mostrarFicha = () => {
-  let id = window.location.search.replace("?id=", "");
+  const id = window.location.search.replace("?id=", "");
 
   let animal = null;
   for (let i = 0; i < ANIMALES.length; i++) {
@@ -362,7 +362,7 @@ let mostrarFicha = () => {
     }
   }
 
-  let ficha = document.getElementById("ficha");
+  const ficha = document.getElementById("ficha");
   if (animal === null) {
     ficha.innerHTML = '<p class="texto-suave">No encontramos esa especie.</p>';
     return;
@@ -399,7 +399,7 @@ let mostrarFicha = () => {
     }
   }
 
-  let zona = NOMBRES_ZONA[animal.zona];
+  const zona = NOMBRES_ZONA[animal.zona];
   let html = '<div class="encabezado-pagina">';
   html += '<p class="subtitulo">' + zona + "</p>";
   html += '<h2 class="titulo-grande">' + animal.nombre + "</h2>";
@@ -438,7 +438,7 @@ let mostrarFicha = () => {
  * @return {boolean} true si la cantidad esta bien y false si esta mal
  */
 let cantidadValida = (campo) => {
-  let valor = campo.value;
+  const valor = campo.value;
   let mensaje = "";
 
   if (valor === "" || isNaN(valor)) {
@@ -476,12 +476,12 @@ let calcularEnvio = (subtotal) => {
  * @method calcularPedido
  */
 let calcularPedido = () => {
-  let resultado = document.getElementById("resultado-pedido");
+  const resultado = document.getElementById("resultado-pedido");
   resultado.textContent = "";
   let subtotal = 0;
 
   for (let numero = 1; numero <= PELUCHES.length; numero++) {
-    let campo = document.getElementById("cantidad-" + numero);
+    const campo = document.getElementById("cantidad-" + numero);
     if (campo.value !== "") {
       if (!cantidadValida(campo)) {
         return;
@@ -494,7 +494,7 @@ let calcularPedido = () => {
     alert("Ingresá la cantidad de al menos un peluche.");
     return;
   }
-  let envio = calcularEnvio(subtotal);
+  const envio = calcularEnvio(subtotal);
   resultado.textContent =
     "Subtotal: $" +
     subtotal.toFixed(2) +
@@ -519,8 +519,8 @@ let elegirPlan = (plan) => {
  * @return {boolean} Siempre false, para que la página no se recargue
  */
 let iniciarSesion = () => {
-  let correo = document.getElementById("registro-correo");
-  let clave = document.getElementById("registro-clave");
+  const correo = document.getElementById("registro-correo");
+  const clave = document.getElementById("registro-clave");
 
   if (!correo.value.includes("@")) {
     alert("Ingresá un correo válido.");

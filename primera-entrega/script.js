@@ -4,15 +4,15 @@ let ANIMALES = [
     zona: 1,
     nombre: "Delfín Nariz de Botella",
     cientifico: "Tursiops truncatus",
-    rango: "0m-150m",
-    imagen: "Imagenes/delfin.jpg",
+    rango: "0m - 150m",
+    imagen: "imagenes/delfin.jpg",
     resumen:
       "Se comunican mediante silbidos únicos que funcionan exactamente como nombres propios.",
     estado: "Preocupación Menor (LC)",
     perfil: [
       {
         etiqueta: "Rango de profundidad",
-        valor: "0m - 150m (costero y oceánico",
+        valor: "0m - 150m (costero y oceánico)",
       },
       { etiqueta: "Longitud máxima", valor: "Hasta 4 metros" },
       { etiqueta: "Peso estimado", valor: "Entre 200 y 300 kg" },
@@ -132,7 +132,7 @@ let ANIMALES = [
   {
     id: "linterna",
     zona: 3,
-    nombre: "Pez Linterna del Abiso",
+    nombre: "Pez Linterna del Abismo",
     cientifico: "Melanocetus johnsonii",
     rango: "1200m - 3000m",
     imagen: "imagenes/pez-linterna.jpg",
@@ -168,7 +168,7 @@ let ANIMALES = [
     perfil: [
       {
         etiqueta: "Rango de Profundidad",
-        valor: "300m — 1,200m (Principalmente batipelágico)",
+        valor: "1000m — 2500m (Principalmente batipelágico)",
       },
       { etiqueta: "Longitud Máxima", valor: "Hasta 13 metros (Hembras)" },
       { etiqueta: "Peso Estimado", valor: "Aproximadamente 275 kg" },
@@ -293,7 +293,7 @@ const NOMBRES_ZONA = [
 
 let PELUCHES = [
   { nombre: "Peluche Orca del Abismo", precio: 26 },
-  { nombre: "Peluche Delfín azul", precio: 18.99 },
+  { nombre: "Peluche Delfín Azul", precio: 18.99 },
   { nombre: "Peluche Pulpo Dumbo", precio: 24.99 },
   { nombre: "Peluche Medusa Brillo", precio: 20 },
   { nombre: "Peluche Pez Payaso", precio: 17.5 },
@@ -432,9 +432,10 @@ let mostrarFicha = () => {
 
 /**
  * Revisa que la cantidad de un campo sea un entero entre 1 y 100.
+ * Si esta mal avisa con alert, vacia el campo y le da el foco
  * @method cantidadValida
- * @param {object} campo
- * @return {boolean}
+ * @param {object} campo -el input de la cantidad
+ * @return {boolean} true si la cantidad esta bien y false si esta mal
  */
 let cantidadValida = (campo) => {
   let valor = campo.value;
@@ -458,6 +459,7 @@ let cantidadValida = (campo) => {
 };
 
 /**
+ * Calcula el envio, es gratis a partir de $60, si no cuesta $8
  * @method calcularEnvio
  * @param {number} subtotal Precio de los peluches
  * @return {number} Lo que cuesta el envío
@@ -505,14 +507,14 @@ let calcularPedido = () => {
 /**
  * Deja seleccionado en el formulario el plan que se eligió
  * @method elegirPlan
- * @param {string} plan  Nombre del plan
+ * @param {string} plan -  Nombre del plan: basico, premium o VIP
  */
 let elegirPlan = (plan) => {
   document.getElementById("registro-plan").value = plan;
 };
 
 /**
- * Valida el formulario del club
+ * Valida correo y contraseña del club y muestra la sesion
  * @method iniciarSesion
  * @return {boolean} Siempre false, para que la página no se recargue
  */

@@ -2,7 +2,7 @@
 
 Proyecto 2026 de la materia **Taller de Desarrollo Web**.
 
-## Indice
+## índice
 
 - [Autores](#autores)
 - [Link a Github Pages](#link-a-github-pages)
@@ -22,7 +22,7 @@ Proyecto 2026 de la materia **Taller de Desarrollo Web**.
 **Abisal** es un sitio web sobre animales marinos donde se puede recorrer las distintas zonas del océano, desde la superficie hasta el fondo.
 Incluye fichas de especies, tienda de peluches, club y contacto.
 
-### Paginas
+### Páginas
 
 | Pagina           | Archivo       |
 | ---------------- | ------------- |

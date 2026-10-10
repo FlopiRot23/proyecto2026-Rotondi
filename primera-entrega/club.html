@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Florencia Rotondi" />
+    <meta
+      name="description"
+      content="Planes del club Abisal, con artículos exclusivos, eventos y newsletter para la comunidad."
+    />
+    <meta
+      name="keywords"
+      content="club, suscripción, planes, artículos exclusivos"
+    />
+    <title>Club Exclusivo | Abisal</title>
+    <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="pagina">
+      <header class="cabecera">
+        <h1 class="logo">
+          <a href="index.html"><span class="logo-icono"></span>Abisal</a>
+        </h1>
+        <nav class="menu" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="tienda.html">Tienda</a>
+          <a href="club.html" class="activo">Club Exclusivo</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <a href="club.html" class="boton-sesion">Ingresar</a>
+      </header>
+      <main class="seccion">
+        <div class="encabezado-centrado">
+          <p class="subtitulo">Club exclusivo</p>
+          <h2 class="titulo-grande">Sumergí tu mente en conocimiento</h2>
+          <p class="encabezado-texto">
+            Formá parte de esta hermosa comunidad. Disfrutá de un artículo
+            exclusivo, acceso temprano a nuevos peluches limitados y chats en
+            vivo con la creadora.
+          </p>
+        </div>
+        <section class="grilla" aria-label="Planes del Club">
+          <article class="panel plan">
+            <div>
+              <h3 class="plan-nombre">Básico</h3>
+              <p class="texto-suave">Para mentes curiosas</p>
+            </div>
+            <p class="plan-precio">Gratis</p>
+            <ul class="plan-beneficios">
+              <li>Acceso a artículos públicos</li>
+              <li>Boletín mensual básico</li>
+              <li>Visualizador de profundidad</li>
+            </ul>
+            <a
+              class="boton"
+              href="#panel-registro"
+              onclick="elegirPlan('Básico')"
+              >Elegir plan</a
+            >
+          </article>
+          <article class="panel plan plan-popular">
+            <span class="plan-estrella"> Más popular</span>
+            <div>
+              <h3 class="plan-nombre">Premium</h3>
+              <p class="texto-suave">El favorito de todos</p>
+            </div>
+            <p class="plan-precio">$5/mes</p>
+            <ul class="plan-beneficios">
+              <li>Todo lo básico</li>
+              <li>Artículos exclusivos de profundidad</li>
+              <li>Acceso anticipado a los nuevos peluches</li>
+            </ul>
+            <a
+              class="boton"
+              href="#panel-registro"
+              onclick="elegirPlan('Premium')"
+              >Elegir plan</a
+            >
+          </article>
+          <article class="panel plan">
+            <div>
+              <h3 class="plan-nombre">VIP</h3>
+              <p class="texto-suave">Nivel de inmersión total</p>
+            </div>
+            <p class="plan-precio">$12/mes</p>
+            <ul class="plan-beneficios">
+              <li>Todo lo Premium</li>
+              <li>Eventos virtuales mensuales con la comunidad y expertos</li>
+              <li>Detrás de escenas de los buceos mas emblemáticos</li>
+              <li>Peluche exclusivo anual de regalo</li>
+            </ul>
+            <a class="boton" href="#panel-registro" onclick="elegirPlan('VIP')"
+              >Elegir plan</a
+            >
+          </article>
+        </section>
+        <div class="club-fila">
+          <section id="panel-registro" class="panel formulario-panel">
+            <form
+              id="formulario-registro"
+              class="formulario"
+              novalidate
+              onsubmit="return iniciarSesion();"
+            >
+              <h3 class="titulo-panel">Unite al Abismo</h3>
+              <div class="campo">
+                <label for="registro-correo">Correo electrónico</label>
+                <input
+                  type="email"
+                  id="registro-correo"
+                  name="correo"
+                  size="30"
+                  maxlength="60"
+                  placeholder="ejemplo@correo.com"
+                />
+              </div>
+              <div class="campo">
+                <label for="registro-clave">Contraseña</label>
+                <input
+                  type="password"
+                  id="registro-clave"
+                  name="clave"
+                  size="30"
+                  maxlength="30"
+                  placeholder="Mínimo 6 caracteres"
+                  autocomplete="new-password"
+                />
+              </div>
+              <div class="campo">
+                <label for="registro-plan">Plan</label>
+                <select id="registro-plan" name="plan">
+                  <option value="Básico">Básico</option>
+                  <option value="Premium" selected>Premium</option>
+                  <option value="VIP">VIP</option>
+                </select>
+              </div>
+              <button type="submit" class="boton boton-cian">
+                Crear cuenta y continuar
+              </button>
+              <p class="texto-suave">
+                Demostración: no se envía ningún dato a un servidor.
+              </p>
+            </form>
+          </section>
+          <section id="panel-sesion" class="panel panel-sesion" hidden>
+            <p id="sesion-plan" class="subtitulo"></p>
+            <h3 id="sesion-saludo" class="titulo-panel"></h3>
+            <p>
+              Ya tenés acceso a las fichas profundas y al archivo de
+              expediciones. Se publican dos artículos nuevos por mes.
+            </p>
+            <button
+              type="button"
+              class="boton boton-borde"
+              onclick="cerrarSesion()"
+            >
+              Cerrar sesión
+            </button>
+          </section>
+          <section class="club-comparacion">
+            <h3 class="titulo-medio">Comparación de beneficios</h3>
+            <div class="tabla-contenedor">
+              <table class="tabla tabla-comparacion">
+                <caption>
+                  Beneficios incluidos en cada plan del club
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Beneficio</th>
+                    <th scope="col">Básico</th>
+                    <th scope="col">Premium</th>
+                    <th scope="col">VIP</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Acceso a especies comunes</th>
+                    <td class="valor-si">✓</td>
+                    <td class="valor-si">✓</td>
+                    <td class="valor-si">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Fichas de especies abisales</th>
+                    <td class="valor-no">-</td>
+                    <td class="valor-si">✓</td>
+                    <td class="valor-si">✓</td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Sesiones en vivo</th>
+                    <td class="valor-no">-</td>
+                    <td class="valor-no">-</td>
+                    <td class="valor-si">✓</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+        <section id="seccion-articulos" class="articulos" hidden>
+          <h3 class="titulo-medio">Artículos exclusivos de profundidad</h3>
+          <div class="grilla grilla-2">
+            <article class="panel articulo">
+              <p class="articulo-codigo">FP · 014</p>
+              <h4 class="articulo-titulo">Cómo se filma un calamar gigante</h4>
+              <p class="texto-suave">
+                La primera filmación en su ambiente, en 2012, usó una cámara sin
+                luz blanca y un señuelo que imitaba el destello de una medusa en
+                alarma. Reconstruimos el diseño del equipo y qué mostró el video
+                sobre su forma de atacar.
+              </p>
+              <p class="texto-chico">
+                18 min · con esquemas del equipo de filmación
+              </p>
+            </article>
+            <article class="panel articulo">
+              <p class="articulo-codigo">FP · 013</p>
+              <h4 class="articulo-titulo">
+                La migración vertical, medida con sonar
+              </h4>
+              <p class="texto-suave">
+                Los ecos que los operadores llamaban "falso fondo" eran
+                cardúmenes subiendo al anochecer. Qué revela ese eco sobre la
+                biomasa del océano y cómo entra en los cálculos de carbono.
+              </p>
+              <p class="texto-chico">12 min · con series de datos acústicos</p>
+            </article>
+            <article class="panel articulo">
+              <p class="articulo-codigo">FP · 012</p>
+              <h4 class="articulo-titulo">
+                Bioluminiscencia: química de la luz fría
+              </h4>
+              <p class="texto-suave">
+                Luciferina, luciferasa y oxígeno: tres piezas que aparecieron
+                por evolución independiente decenas de veces en el mar. Para qué
+                sirve la luz en cada caso y por qué casi siempre es azul.
+              </p>
+              <p class="texto-chico">
+                15 min · con tabla comparativa por grupo
+              </p>
+            </article>
+            <article class="panel articulo">
+              <p class="articulo-codigo">FP · 011</p>
+              <h4 class="articulo-titulo">Vivir sin oxígeno a 900 metros</h4>
+              <p class="texto-suave">
+                La zona de mínimo oxígeno excluye a casi todos los depredadores
+                grandes, y eso la convierte en refugio. Cómo se sostiene un
+                metabolismo ahí y qué pasa cuando esas capas se expanden.
+              </p>
+              <p class="texto-chico">11 min · con perfiles de oxígeno</p>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="pie">
+        <p class="pie-titulo">Abismo Azul</p>
+        <p>Mostrando los secretos mejor guardados de nuestro planeta azul.</p>
+        <div class="pie-columnas">
+          <nav class="pie-columna" aria-label="Explorar">
+            <h3>Explorar</h3>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#zona-1">Especies</a>
+            <a href="index.html#zona-4">Profundidades</a>
+          </nav>
+          <nav class="pie-columna" aria-label="Servicios">
+            <h3>Servicios</h3>
+            <a href="tienda.html">Tienda de peluches</a>
+            <a href="club.html">Club Exclusivo</a>
+            <a href="contacto.html">Contacto</a>
+          </nav>
+        </div>
+        <p class="pie-creditos">
+          © 2026 Florencia Rotondi Michelfelder. Todos los derechos reservados.
+        </p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

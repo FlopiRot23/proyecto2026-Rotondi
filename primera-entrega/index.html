@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Florencia Rotondi" />
+    <meta
+      name="description"
+      content="Abisal es un recorrido interactivo por las zonas del océano, con fichas de especies, tienda de peluches y club de socios"
+    />
+    <meta
+      name="keywords"
+      content="océano,animales marinos, profundidad, especies, peluches"
+    />
+    <title>Abisal | Expedición por las profundidades</title>
+    <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="mostrarZonas()">
+    <div class="pagina">
+      <header class="cabecera">
+        <h1 class="logo">
+          <a href="index.html"><span class="logo-icono"></span>Abisal</a>
+        </h1>
+        <nav class="menu" aria-label="Navegación principal">
+          <a href="index.html" class="activo">Inicio</a>
+          <a href="tienda.html">Tienda</a>
+          <a href="club.html">Club Exclusivo</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <a href="club.html" class="boton-sesion">Ingresar</a>
+      </header>
+      <main>
+        <section class="portada">
+          <p class="subtitulo">Descubrí lo inexplorado</p>
+          <h2 class="titulo-portada">Abismo Azul</h2>
+          <p class="portada-texto">
+            Sumate a una expedición vertical interactiva desde la superficie
+            radiante hasta las llanuras abisales donde la luz jamás ha tocado.
+          </p>
+          <div class="botones">
+            <a href="#zona-1">Comenzar descenso</a>
+            <a href="club.html">Aprender más</a>
+          </div>
+        </section>
+        <section id="zona-1" class="zona-epipelagica">
+          <div class="zona-encabezado">
+            <div class="zona-titulos">
+              <h2 class="titulo-zona">Zona Epipelágica (Luz Solar)</h2>
+              <p class="zona-rango">Rango de profundidad: 0m - 200m</p>
+            </div>
+            <p class="zona-descripcion">
+              Aquí vive el 90% de la vida marina conocida. El sol alimenta las
+              algas que sostienen toda esta colorida cadena alimenticia.
+            </p>
+          </div>
+          <div id="grilla-zona-1" class="grilla"></div>
+        </section>
+        <p class="separador">Descendiendo bajo la línea de luz solar... 200m</p>
+        <section id="zona-2" class="zona-mesopelagica">
+          <div class="zona-encabezado">
+            <div class="zona-titulos">
+              <h2 class="titulo-zona">Zona Mesopelágica (Penumbra)</h2>
+              <p class="zona-rango">Rango de profundidad: 200m - 1.000m</p>
+            </div>
+            <p class="zona-descripcion">
+              La luz aquí es extremadamente tenue. Los habitantes suelen tener
+              ojos enormes dirigidos hacia arriba para captar siluetas.
+            </p>
+          </div>
+          <div id="grilla-zona-2" class="grilla"></div>
+        </section>
+        <p class="separador">Entrando en la oscuridad perpetua... 1.000m</p>
+        <section id="zona-3" class="zona-batipelagica">
+          <div class="zona-encabezado">
+            <div class="zona-titulos">
+              <h2 class="titulo-zona">Zona Batipelágica (Medianoche)</h2>
+              <p class="zona-rango">Rango de profundidad: 1.000m - 4.000m</p>
+            </div>
+            <p class="zona-descripcion">
+              Sin luz solar alguna. La única iluminación es biológica. Los
+              animales dependen de la lluvia de detritos orgánicos desde arriba.
+            </p>
+          </div>
+          <div id="grilla-zona-3" class="grilla"></div>
+        </section>
+        <p class="separador">El fin del océano... 4.000m y más allá</p>
+        <section id="zona-4" class="zona-abisopelagica">
+          <div class="zona-encabezado">
+            <div class="zona-titulos">
+              <h2 class="titulo-zona">Zona Abisopelágica (El Abismo)</h2>
+              <p class="zona-rango">
+                Rango de profundidad: 4.000m - Fondos marinos
+              </p>
+            </div>
+            <p class="zona-descripcion">
+              La presión es aplastante y el agua está apenas por encima del
+              punto de congelación. La vida aquí ha evolucionado de formas
+              alienígenas.
+            </p>
+          </div>
+          <div id="grilla-zona-4" class="grilla"></div>
+        </section>
+        <section class="invitacion">
+          <h2 class="titulo-invitacion">¿Hasta dónde podemos llegar?</h2>
+          <p class="invitacion-texto">
+            Hacete socio del club y viví experiencias exclusivas.
+          </p>
+          <div class="indicadores">
+            <div class="indicador">
+              <p class="indicador-numero">10.928m</p>
+              <p>Récord (Fosa de las Marianas)</p>
+            </div>
+            <div class="indicador">
+              <p class="indicador-numero">432</p>
+              <p>Especies registradas</p>
+            </div>
+          </div>
+          <a href="club.html">Unirme al Club</a>
+        </section>
+      </main>
+      <footer class="pie">
+        <p class="pie-titulo">Abismo Azul</p>
+        <p>Mostrando los secretos mejor guardados de nuestro planeta azul.</p>
+        <div class="pie-columnas">
+          <nav class="pie-columna" aria-label="Explorar">
+            <h3>Explorar</h3>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#zona-1">Especies</a>
+            <a href="index.html#zona-4">Profundidades</a>
+          </nav>
+          <nav class="pie-columna" aria-label="Servicios">
+            <h3>Servicios</h3>
+            <a href="tienda.html">Tienda de peluches</a>
+            <a href="club.html">Club Exclusivo</a>
+            <a href="contacto.html">Contacto</a>
+          </nav>
+        </div>
+        <p class="pie-creditos">
+          © 2026 Florencia Rotondi Michelfelder. Todos los derechos reservados.
+        </p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

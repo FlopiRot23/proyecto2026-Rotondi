@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Florencia Rotondi" />
+    <meta
+      name="description"
+      content="Ficha de un animal marino mostrado en la página"
+    />
+    <meta
+      name="keywords"
+      content="animal marino, ficha, conservación, océano, profundidad"
+    />
+    <title>Ficha de especie | Abisal</title>
+    <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="mostrarFicha()">
+    <div class="pagina">
+      <header class="cabecera">
+        <h1 class="logo">
+          <a href="index.html"><span class="logo-icono"></span>Abisal</a>
+        </h1>
+        <nav class="menu" aria-label="Navegación principal">
+          <a href="index.html" class="activo">Inicio</a>
+          <a href="tienda.html">Tienda</a>
+          <a href="club.html">Club Exclusivo</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <a href="club.html" class="boton-sesion">Ingresar</a>
+      </header>
+      <main class="seccion" id="ficha"></main>
+      <footer class="pie">
+        <p class="pie-titulo">Abismo Azul</p>
+        <p>Mostrando los secretos mejor guardados de nuestro planeta azul.</p>
+        <div class="pie-columnas">
+          <nav class="pie-columna" aria-label="Explorar">
+            <h3>Explorar</h3>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#zona-1">Especies</a>
+            <a href="index.html#zona-4">Profundidades</a>
+          </nav>
+          <nav class="pie-columna" aria-label="Servicios">
+            <h3>Servicios</h3>
+            <a href="tienda.html">Tienda de peluches</a>
+            <a href="club.html">Club Exclusivo</a>
+            <a href="contacto.html">Contacto</a>
+          </nav>
+        </div>
+        <p class="pie-creditos">
+          © 2026 Florencia Rotondi Michelfelder. Todos los derechos reservados.
+        </p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

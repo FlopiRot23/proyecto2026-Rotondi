@@ -16,7 +16,7 @@ Proyecto 2026 de la materia **Taller de Desarrollo Web**.
 
 ## Link a Github Pages
 
-- [Ver sitio publicado](futuro link de github pages va acá)
+- [Ver sitio publicado](https://flopirot23.github.io/proyecto2026-Rotondi/primera-entrega/index.html)
 
 ## Link al Wireframe
 

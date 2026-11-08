@@ -6,6 +6,28 @@ import Card from '@/components/Card.jsx'
 import { claseEtiqueta, claseZona, rutaImagen } from '@/utils/zonas.js'
 
 /**
+ * Arma la tarjeta de un animal que lleva a su ficha
+ * @method mostrarTarjeta
+ * @param {object} animal - Un animal de la API
+ * @return {JSX.Element} La tarjeta del animal
+ */
+let mostrarTarjeta = (animal) => {
+  return (
+    <Card
+      key={animal.id}
+      imagen={rutaImagen(animal.imagen)}
+      alt={animal.nombre}
+      titulo={animal.nombre}
+      etiqueta={animal.rango}
+      claseEtiqueta={claseEtiqueta(animal.zona)}
+      enlace={'/animal/' + animal.id}
+    >
+      <p className="texto-suave">{animal.resumen}</p>
+    </Card>
+  )
+}
+
+/**
  * Página de inicio: portada, las cuatro zonas del océano con sus animales e invitación al club
  * @method Inicio
  * @return {JSX.Element} La página de inicio
@@ -42,6 +64,46 @@ let Inicio = () => {
     }
   }, [zonas])
 
+  /**
+   * Busca los animales que viven en una zona
+   * @method animalesDeZona
+   * @param {number} idZona - Número de la zona (1 a 4)
+   * @return {object[]} Los animales de esa zona
+   */
+  let animalesDeZona = (idZona) => {
+    const lista = []
+    for (let i = 0; i < animales.length; i++) {
+      if (animales[i].zona === idZona) {
+        lista.push(animales[i])
+      }
+    }
+    return lista
+  }
+
+  /**
+   * Arma la sección de una zona con sus tarjetas y el separador que va debajo
+   * @method mostrarZona
+   * @param {object} zona - Una zona de la API
+   * @return {JSX.Element} La sección de la zona
+   */
+  let mostrarZona = (zona) => {
+    return (
+      <div key={zona.id}>
+        <section id={'zona-' + zona.id} className={claseZona(zona.id)}>
+          <div className="zona-encabezado">
+            <div className="zona-titulos">
+              <h2 className="titulo-zona">{zona.titulo}</h2>
+              <p className="zona-rango">{zona.rango}</p>
+            </div>
+            <p className="zona-descripcion">{zona.descripcion}</p>
+          </div>
+          <div className="grilla">{animalesDeZona(zona.id).map(mostrarTarjeta)}</div>
+        </section>
+        {zona.separador !== '' && <p className="separador">{zona.separador}</p>}
+      </div>
+    )
+  }
+
   return (
     <main>
       <section className="portada">
@@ -63,37 +125,7 @@ let Inicio = () => {
         </p>
       )}
 
-      {zonas.map((zona) => (
-        <div key={zona.id}>
-          <section id={'zona-' + zona.id} className={claseZona(zona.id)}>
-            <div className="zona-encabezado">
-              <div className="zona-titulos">
-                <h2 className="titulo-zona">{zona.titulo}</h2>
-                <p className="zona-rango">{zona.rango}</p>
-              </div>
-              <p className="zona-descripcion">{zona.descripcion}</p>
-            </div>
-            <div className="grilla">
-              {animales
-                .filter((animal) => animal.zona === zona.id)
-                .map((animal) => (
-                  <Card
-                    key={animal.id}
-                    imagen={rutaImagen(animal.imagen)}
-                    alt={animal.nombre}
-                    titulo={animal.nombre}
-                    etiqueta={animal.rango}
-                    claseEtiqueta={claseEtiqueta(animal.zona)}
-                    enlace={'/animal/' + animal.id}
-                  >
-                    <p className="texto-suave">{animal.resumen}</p>
-                  </Card>
-                ))}
-            </div>
-          </section>
-          {zona.separador !== '' && <p className="separador">{zona.separador}</p>}
-        </div>
-      ))}
+      {zonas.map(mostrarZona)}
 
       <section className="invitacion">
         <h2 className="titulo-invitacion">¿Hasta dónde podemos llegar?</h2>

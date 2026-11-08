@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from '@/components/Layout.jsx'
+import Inicio from '@/pages/Inicio.jsx'
 
 /**
  * Componente principal: define las rutas del sitio dentro del Layout
@@ -10,7 +11,9 @@ let App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Inicio />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )

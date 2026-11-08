@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { obtenerZonas } from '@/api/zonas.js'
 import { obtenerAnimales } from '@/api/animales.js'
 import Card from '@/components/Card.jsx'
@@ -36,6 +36,7 @@ let Inicio = () => {
   const [zonas, setZonas] = useState([])
   const [animales, setAnimales] = useState([])
   const [error, setError] = useState('')
+  const ubicacion = useLocation()
 
   useEffect(() => {
     document.title = 'Abisal | Expedición por las profundidades'
@@ -56,13 +57,13 @@ let Inicio = () => {
   }, [])
 
   useEffect(() => {
-    if (zonas.length > 0 && window.location.hash !== '') {
-      const seccion = document.getElementById(window.location.hash.replace('#', ''))
+    if (animales.length > 0 && ubicacion.hash !== '') {
+      const seccion = document.getElementById(ubicacion.hash.replace('#', ''))
       if (seccion) {
         seccion.scrollIntoView()
       }
     }
-  }, [zonas])
+  }, [animales, ubicacion.hash])
 
   /**
    * Busca los animales que viven en una zona

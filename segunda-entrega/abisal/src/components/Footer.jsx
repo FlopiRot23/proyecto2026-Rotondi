@@ -14,8 +14,8 @@ let Footer = () => {
         <nav className="pie-columna" aria-label="Explorar">
           <h3>Explorar</h3>
           <Link to="/">Inicio</Link>
-          <a href="/#zona-1">Especies</a>
-          <a href="/#zona-4">Profundidades</a>
+          <Link to="/#zona-1">Especies</Link>
+          <Link to="/#zona-4">Profundidades</Link>
         </nav>
         <nav className="pie-columna" aria-label="Servicios">
           <h3>Servicios</h3>

@@ -1,16 +1,18 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Layout from '@/components/Layout.jsx'
+
 /**
- * Componente principal de la aplicación
+ * Componente principal: define las rutas del sitio dentro del Layout
  * @method App
- * @return {JSX.Element} La página de prueba mientras se arman las rutas
+ * @return {JSX.Element} El enrutador con todas las páginas
  */
 let App = () => {
   return (
-    <main className="seccion">
-      <section className="portada">
-        <p className="subtitulo">Descubrí lo inexplorado</p>
-        <h2 className="titulo-portada">Abismo Azul</h2>
-      </section>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

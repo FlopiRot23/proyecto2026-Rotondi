@@ -1,0 +1,59 @@
+@use "variables" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: $fondo;
+  color: $blanco;
+  font-family: $texto;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+dl,
+dd,
+ul {
+  margin: 0;
+}
+
+h2,
+h3,
+h4 {
+  font-family: $titulo;
+  line-height: 1.1;
+}
+
+h3,
+h4 {
+  font-size: 24px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: $cian;
+  text-decoration: none;
+}
+
+a:hover,
+button:hover {
+  opacity: 0.8;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  flex: 1;
+}

@@ -1,0 +1,49 @@
+@use "variables" as *;
+
+.integrante {
+  overflow: hidden;
+}
+
+.avatar-0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 260px;
+  background: linear-gradient(135deg, $cian, #0f5c8c);
+  font-family: $titulo;
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.contacto-panel {
+  flex: 1;
+}
+
+.datos-contacto {
+  dt {
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $suave;
+  }
+
+  dd {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.redes a {
+  display: block;
+  padding: 14px 18px;
+  border: 1px solid $borde;
+  border-radius: 12px;
+  color: $blanco;
+  font-weight: bold;
+
+  &:hover {
+    border-color: $cian;
+  }
+}

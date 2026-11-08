@@ -1,0 +1,97 @@
+@use "variables" as *;
+
+.titulo-portada {
+  font-size: 72px;
+  line-height: 1;
+}
+
+.titulo-grande {
+  font-size: 48px;
+}
+
+.titulo-zona {
+  font-size: 40px;
+  line-height: 1;
+}
+
+.titulo-invitacion {
+  font-size: 32px;
+  text-align: center;
+  color: $cian;
+}
+
+.titulo-medio {
+  font-size: 28px;
+}
+
+.tarjeta-titulo,
+.integrante-nombre {
+  font-size: 22px;
+}
+
+.subtitulo,
+.articulo-codigo,
+.integrante-rol,
+.indicador p {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $cian;
+}
+
+.subtitulo {
+  font-size: 14px;
+  letter-spacing: 0.22em;
+}
+
+.integrante-rol {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+.articulo-codigo,
+.indicador p {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.indicador .indicador-numero {
+  font-family: $titulo;
+  font-size: 48px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: $blanco;
+  line-height: 1;
+}
+
+.texto-suave,
+.texto-chico,
+.encabezado-texto,
+.invitacion-texto,
+.zona-rango,
+.zona-descripcion {
+  color: $suave;
+}
+
+.texto-suave {
+  font-size: 15px;
+}
+
+.texto-chico {
+  font-size: 12px;
+}
+
+.encabezado-texto {
+  max-width: 680px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.invitacion-texto {
+  max-width: 600px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.encabezado-centrado {
+  text-align: center;
+}

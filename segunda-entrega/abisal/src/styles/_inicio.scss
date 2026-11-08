@@ -1,0 +1,62 @@
+@use "variables" as *;
+
+.portada {
+  justify-content: center;
+  min-height: 720px;
+  padding: 120px;
+  background-image:
+    linear-gradient(rgba(2, 11, 20, 0.4), rgba(2, 11, 20, 0.4)),
+    url("@/assets/hero-superficie.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.portada-texto {
+  max-width: 620px;
+  font-size: 18px;
+}
+
+.zona-epipelagica {
+  background: linear-gradient(#006280, #042d3c);
+}
+
+.zona-mesopelagica {
+  background: linear-gradient(#042d3c, #021722);
+}
+
+.zona-batipelagica {
+  background: linear-gradient(#021722, #010a14);
+}
+
+.zona-abisopelagica {
+  background: $fondo;
+}
+
+.zona-rango {
+  font-size: 18px;
+}
+
+.zona-descripcion {
+  width: 400px;
+}
+
+.separador {
+  padding: 32px 80px;
+  font-family: $titulo;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+  color: $suave;
+}
+
+.invitacion {
+  padding: 80px 120px;
+  background: $oscuro;
+  border-top: 1px solid $borde;
+  border-bottom: 1px solid $borde;
+}
+
+.indicadores {
+  gap: 64px;
+  padding: 16px 0;
+}

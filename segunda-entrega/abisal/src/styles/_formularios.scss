@@ -1,0 +1,35 @@
+@use "variables" as *;
+
+.campo label,
+.campo-cantidad label {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $suave;
+}
+
+input,
+select {
+  width: 100%;
+  height: 41px;
+  padding: 0 12px;
+  border: 1px solid $borde;
+  border-radius: 8px;
+  background: $fondo;
+  color: $blanco;
+  font-size: 14px;
+
+  &:focus {
+    border-color: $cian;
+    outline: none;
+  }
+
+  &[aria-invalid="true"] {
+    border-color: $error;
+  }
+}
+
+.mensaje-error {
+  color: $error;
+  font-size: 13px;
+}

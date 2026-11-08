@@ -1,0 +1,139 @@
+.pagina,
+.tarjeta,
+.tarjeta-cuerpo,
+.integrante,
+.indicador,
+.encabezado-pagina,
+.encabezado-centrado,
+.zona-titulos,
+.articulo,
+.plan,
+.contacto-panel,
+.club-comparacion,
+.campo,
+.campo-cantidad,
+.formulario,
+.pedido,
+.datos-contacto,
+.redes,
+.invitacion,
+.portada,
+.pie-columna,
+.seccion,
+.zona-epipelagica,
+.zona-mesopelagica,
+.zona-batipelagica,
+.zona-abisopelagica {
+  display: flex;
+  flex-direction: column;
+}
+
+.pagina {
+  min-height: 100vh;
+}
+
+.campo,
+.campo-cantidad {
+  gap: 8px;
+}
+
+.encabezado-pagina,
+.zona-titulos,
+.articulo,
+.pie-columna,
+.redes {
+  gap: 12px;
+}
+
+.encabezado-centrado,
+.tarjeta-cuerpo,
+.formulario,
+.pedido,
+.datos-contacto {
+  gap: 16px;
+}
+
+.contacto-panel {
+  gap: 20px;
+  padding: 32px;
+}
+
+.invitacion,
+.plan,
+.club-comparacion,
+.portada {
+  gap: 24px;
+}
+
+.zona-epipelagica,
+.zona-mesopelagica,
+.zona-batipelagica,
+.zona-abisopelagica {
+  gap: 48px;
+  padding: 100px 80px;
+}
+
+.seccion {
+  gap: 64px;
+  padding: 72px 80px 80px;
+}
+
+.encabezado-centrado,
+.invitacion,
+.indicador {
+  align-items: center;
+}
+
+.pedido,
+.portada {
+  align-items: flex-start;
+}
+
+.cabecera,
+.menu,
+.logo a,
+.botones,
+.indicadores,
+.zona-encabezado,
+.club-fila,
+.contacto-fila,
+.pie,
+.pie-columnas,
+.tarjeta-titulo-fila {
+  display: flex;
+}
+
+.menu,
+.logo a,
+.indicadores,
+.pie {
+  align-items: center;
+}
+
+.zona-encabezado {
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.club-fila {
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.tarjeta-titulo-fila {
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+.botones {
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.contacto-fila {
+  gap: 24px;
+}

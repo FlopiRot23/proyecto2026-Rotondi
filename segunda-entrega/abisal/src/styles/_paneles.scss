@@ -1,0 +1,59 @@
+@use "variables" as *;
+
+.panel,
+.tabla-contenedor {
+  border: 1px solid $borde;
+  border-radius: 16px;
+  background: $panel;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.grilla-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.tarjeta {
+  overflow: hidden;
+  color: $blanco;
+
+  &:hover {
+    border-color: $cian;
+  }
+}
+
+.tarjeta-imagen {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.tarjeta-cuerpo,
+.articulo {
+  padding: 24px;
+}
+
+.formulario-panel,
+.pedido {
+  padding: 28px;
+}
+
+.etiqueta {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.etiqueta-luz {
+  background: #06323d;
+  color: $cian;
+}
+
+.etiqueta-profunda {
+  background: #2a0a3a;
+  color: $violeta;
+}

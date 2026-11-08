@@ -1,0 +1,85 @@
+@use "variables" as *;
+
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 20px 80px;
+  background: $fondo;
+  border-bottom: 1px solid $borde;
+}
+
+.logo {
+  font-family: $titulo;
+  font-size: 24px;
+  font-style: italic;
+  line-height: 1;
+
+  a {
+    gap: 16px;
+    color: $blanco;
+  }
+}
+
+.logo-icono {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $cian, #103162);
+}
+
+.menu {
+  gap: 40px;
+
+  a {
+    color: $suave;
+    padding-bottom: 4px;
+  }
+
+  a.activo {
+    color: $cian;
+    border-bottom: 2px solid $cian;
+  }
+}
+
+.boton,
+.boton-sesion,
+.botones a,
+.invitacion a {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid $cian;
+  border-radius: 8px;
+  background: transparent;
+  color: $cian;
+  font-family: $texto;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.boton-sesion {
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.botones a,
+.invitacion a {
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  background: $cian;
+  color: $oscuro;
+}
+
+.boton-cian,
+.tarjeta .boton,
+.pedido .boton,
+.plan-popular .boton {
+  background: $cian;
+  color: $oscuro;
+}

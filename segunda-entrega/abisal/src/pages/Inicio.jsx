@@ -2,30 +2,8 @@ import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { obtenerZonas } from '@/api/zonas.js'
 import { obtenerAnimales } from '@/api/animales.js'
-import Card from '@/components/Card.jsx'
-import { claseEtiqueta, claseZona, rutaImagen } from '@/utils/zonas.js'
-
-/**
- * Arma la tarjeta de un animal que lleva a su ficha
- * @method mostrarTarjeta
- * @param {object} animal - Un animal de la API
- * @return {JSX.Element} La tarjeta del animal
- */
-let mostrarTarjeta = (animal) => {
-  return (
-    <Card
-      key={animal.id}
-      imagen={rutaImagen(animal.imagen)}
-      alt={animal.nombre}
-      titulo={animal.nombre}
-      etiqueta={animal.rango}
-      claseEtiqueta={claseEtiqueta(animal.zona)}
-      enlace={'/animal/' + animal.id}
-    >
-      <p className="texto-suave">{animal.resumen}</p>
-    </Card>
-  )
-}
+import GrillaAnimales from '@/components/GrillaAnimales.jsx'
+import { claseZona } from '@/utils/zonas.js'
 
 /**
  * Página de inicio: portada, las cuatro zonas del océano con sus animales e invitación al club
@@ -98,7 +76,7 @@ let Inicio = () => {
             </div>
             <p className="zona-descripcion">{zona.descripcion}</p>
           </div>
-          <div className="grilla">{animalesDeZona(zona.id).map(mostrarTarjeta)}</div>
+          <GrillaAnimales animales={animalesDeZona(zona.id)} />
         </section>
         {zona.separador !== '' && <p className="separador">{zona.separador}</p>}
       </div>

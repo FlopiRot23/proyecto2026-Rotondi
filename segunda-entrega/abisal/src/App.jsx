@@ -3,6 +3,7 @@ import Layout from '@/components/Layout.jsx'
 import Inicio from '@/pages/Inicio.jsx'
 import Animal from '@/pages/Animal.jsx'
 import Tienda from '@/pages/Tienda.jsx'
+import Club from '@/pages/Club.jsx'
 
 /**
  * Componente principal: define las rutas del sitio dentro del Layout
@@ -17,6 +18,7 @@ let App = () => {
           <Route index element={<Inicio />} />
           <Route path="animal/:id" element={<Animal />} />
           <Route path="tienda" element={<Tienda />} />
+          <Route path="club" element={<Club />} />
         </Route>
       </Routes>
     </BrowserRouter>

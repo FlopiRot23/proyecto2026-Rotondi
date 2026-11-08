@@ -5,6 +5,7 @@ import Inicio from '@/pages/Inicio.jsx'
 import Animal from '@/pages/Animal.jsx'
 import Tienda from '@/pages/Tienda.jsx'
 import Club from '@/pages/Club.jsx'
+import Contacto from '@/pages/Contacto.jsx'
 
 /**
  * Componente principal: comparte la sesión y define las rutas del sitio dentro del Layout
@@ -21,6 +22,7 @@ let App = () => {
             <Route path="animal/:id" element={<Animal />} />
             <Route path="tienda" element={<Tienda />} />
             <Route path="club" element={<Club />} />
+            <Route path="contacto" element={<Contacto />} />
           </Route>
         </Routes>
       </BrowserRouter>

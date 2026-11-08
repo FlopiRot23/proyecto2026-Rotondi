@@ -1,7 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { buscarSocio, registrarSocio } from '@/api/socios.js'
 import Button from '@/components/Button.jsx'
 import Input from '@/components/Input.jsx'
+import { SesionContext } from '@/components/SesionContext.jsx'
 import { LARGO_MINIMO_CLAVE, validarClave, validarCorreo } from '@/utils/validaciones.js'
 
 const PLANES = [
@@ -118,7 +120,8 @@ let Club = () => {
   const [errorCorreo, setErrorCorreo] = useState('')
   const [errorClave, setErrorClave] = useState('')
   const [errorEnvio, setErrorEnvio] = useState('')
-  const [sesion, setSesion] = useState(null)
+  const { sesion, iniciarSesion, cerrarSesion } = useContext(SesionContext)
+  const navegar = useNavigate()
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -207,15 +210,16 @@ let Club = () => {
           return
         }
         await registrarSocio({ correo: correoLimpio, plan: plan })
-        setSesion({ correo: correoLimpio, plan: plan })
+        iniciarSesion(correoLimpio, plan)
       } else {
         if (socio === null) {
           setErrorEnvio('No encontramos ese correo. Creá tu cuenta.')
           return
         }
-        setSesion({ correo: socio.correo, plan: socio.plan })
+        iniciarSesion(socio.correo, socio.plan)
       }
       setClave('')
+      navegar('/tienda')
     } catch {
       setErrorEnvio('No pudimos conectarnos con el club. Revisá que el mock esté corriendo con "npm run api".')
     }
@@ -223,10 +227,10 @@ let Club = () => {
 
   /**
    * Cierra la sesión y vuelve a mostrar el formulario vacío
-   * @method cerrarSesion
+   * @method salirDelClub
    */
-  let cerrarSesion = () => {
-    setSesion(null)
+  let salirDelClub = () => {
+    cerrarSesion()
     setCorreo('')
     setClave('')
     setErrorCorreo('')
@@ -342,7 +346,7 @@ let Club = () => {
               Ya tenés acceso a las fichas profundas y al archivo de expediciones. Se publican dos artículos nuevos por
               mes.
             </p>
-            <Button onClick={cerrarSesion}>Cerrar sesión</Button>
+            <Button onClick={salirDelClub}>Cerrar sesión</Button>
           </section>
         )}
         <section className="club-comparacion">

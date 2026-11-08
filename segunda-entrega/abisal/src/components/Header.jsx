@@ -1,4 +1,6 @@
+import { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { SesionContext } from '@/components/SesionContext.jsx'
 
 /**
  * Devuelve la clase del link del menú según si es la página actual
@@ -20,6 +22,12 @@ let claseMenu = ({ isActive }) => {
  * @return {JSX.Element} El encabezado
  */
 let Header = () => {
+  const { sesion } = useContext(SesionContext)
+  let textoSesion = 'Ingresar'
+  if (sesion !== null) {
+    textoSesion = 'Mi cuenta'
+  }
+
   return (
     <header className="cabecera">
       <h1 className="logo">
@@ -42,7 +50,7 @@ let Header = () => {
         </NavLink>
       </nav>
       <Link to="/club" className="boton-sesion">
-        Ingresar
+        {textoSesion}
       </Link>
     </header>
   )

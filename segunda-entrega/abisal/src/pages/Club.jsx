@@ -219,14 +219,13 @@ let Club = () => {
         iniciarSesion(socio.correo, socio.plan)
       }
       setClave('')
-      navegar('/tienda')
     } catch {
       setErrorEnvio('No pudimos conectarnos con el club. Revisá que el mock esté corriendo con "npm run api".')
     }
   }
 
   /**
-   * Cierra la sesión y vuelve a mostrar el formulario vacío
+   * Cierra la sesión, deja el formulario vacío y vuelve al inicio
    * @method salirDelClub
    */
   let salirDelClub = () => {
@@ -236,6 +235,7 @@ let Club = () => {
     setErrorCorreo('')
     setErrorClave('')
     setModo('registro')
+    navegar('/')
   }
 
   /**

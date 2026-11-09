@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { SesionContext } from '@/components/sesionContexto.js'
+import { SesionContext } from '@/components/SesionContext.js'
 
 const CLAVE_SESION = 'abisal-sesion'
 

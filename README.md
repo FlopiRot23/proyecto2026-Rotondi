@@ -57,6 +57,7 @@ Incluye fichas de especies, tienda de peluches, club y contacto.
 - Sass
 - json-server
 - Node.js y npm
+- Google Fonts
 
 ## Cómo ejecutar la segunda entrega
 

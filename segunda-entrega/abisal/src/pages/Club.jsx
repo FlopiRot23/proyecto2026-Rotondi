@@ -311,6 +311,8 @@ let Club = () => {
                 onChange={cambiarCorreo}
                 error={errorCorreo}
                 placeholder="ejemplo@correo.com"
+                maxLength={60}
+                size={30}
               />
               <Input
                 id="registro-clave"
@@ -320,6 +322,8 @@ let Club = () => {
                 onChange={cambiarClave}
                 error={errorClave}
                 placeholder={'Mínimo ' + LARGO_MINIMO_CLAVE + ' caracteres'}
+                maxLength={30}
+                size={30}
               />
               {modo === 'registro' && (
                 <div className="campo">

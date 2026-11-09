@@ -10,9 +10,11 @@
  * @param {string} props.error - Mensaje de error; texto vacío si el valor está bien
  * @param {string} props.placeholder - Texto de ayuda dentro del campo
  * @param {string} [props.contenedor] - Clase del contenedor: "campo" o "campo-cantidad"
+ * @param {number} [props.maxLength] - Cantidad máxima de caracteres que se pueden escribir
+ * @param {number} [props.size] - Ancho del campo medido en caracteres
  * @return {JSX.Element} El campo con su label y su error
  */
-let Input = ({ id, etiqueta, tipo, valor, onChange, error, placeholder, contenedor = 'campo' }) => {
+let Input = ({ id, etiqueta, tipo, valor, onChange, error, placeholder, contenedor = 'campo', maxLength, size }) => {
   const idError = id + '-error'
   const hayError = error !== ''
   return (
@@ -24,6 +26,8 @@ let Input = ({ id, etiqueta, tipo, valor, onChange, error, placeholder, contened
         value={valor}
         onChange={onChange}
         placeholder={placeholder}
+        maxLength={maxLength}
+        size={size}
         aria-invalid={hayError}
         aria-describedby={hayError ? idError : undefined}
       />

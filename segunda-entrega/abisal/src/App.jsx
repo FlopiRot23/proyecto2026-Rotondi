@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from '@/components/Layout.jsx'
-import { SesionProvider } from '@/components/SesionContext.jsx'
+import { SesionProvider } from '@/components/SesionProvider.jsx'
 import Inicio from '@/pages/Inicio.jsx'
 import Animal from '@/pages/Animal.jsx'
 import Tienda from '@/pages/Tienda.jsx'

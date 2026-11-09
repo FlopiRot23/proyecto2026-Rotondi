@@ -1,0 +1,46 @@
+@use "variables" as *;
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-contenedor {
+  overflow: hidden;
+}
+
+caption {
+  padding: 20px;
+  text-align: left;
+  font-family: $titulo;
+  font-weight: bold;
+  color: $suave;
+}
+
+th,
+td {
+  padding: 14px 20px;
+  border-bottom: 1px solid $borde;
+  text-align: center;
+  font-size: 14px;
+}
+
+thead th {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $suave;
+}
+
+tbody th {
+  text-align: left;
+  font-weight: normal;
+}
+
+.valor-si {
+  color: $verde;
+}
+
+.valor-no {
+  color: $suave;
+}

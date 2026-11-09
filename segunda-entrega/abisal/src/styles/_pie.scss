@@ -1,0 +1,45 @@
+@use "variables" as *;
+
+.pie {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px 48px;
+  padding: 48px 80px;
+  border-top: 1px solid $borde;
+
+  p {
+    color: $suave;
+  }
+
+  .pie-titulo {
+    font-family: $titulo;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: bold;
+    color: $blanco;
+  }
+}
+
+.pie-columnas {
+  gap: 64px;
+}
+
+.pie-columna {
+  font-size: 14px;
+
+  h3 {
+    font-family: $texto;
+    font-size: 14px;
+  }
+
+  a {
+    color: $suave;
+  }
+}
+
+.pie-creditos {
+  width: 100%;
+  padding-top: 24px;
+  border-top: 1px solid $borde;
+  font-size: 12px;
+}

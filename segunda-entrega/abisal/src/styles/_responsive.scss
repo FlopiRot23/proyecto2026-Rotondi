@@ -1,0 +1,126 @@
+@use "variables" as *;
+
+@media (max-width: $movil) {
+  .cabecera {
+    flex-wrap: wrap;
+    row-gap: 12px;
+    height: auto;
+    padding: 14px 20px;
+  }
+
+  .menu {
+    order: 3;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    font-size: 14px;
+
+    a {
+      white-space: nowrap;
+    }
+  }
+
+  .seccion {
+    gap: 40px;
+    padding: 48px 20px;
+  }
+
+  .zona-epipelagica,
+  .zona-mesopelagica,
+  .zona-batipelagica,
+  .zona-abisopelagica {
+    gap: 32px;
+    padding: 56px 20px;
+  }
+
+  .invitacion {
+    padding: 56px 20px;
+  }
+
+  .separador {
+    padding: 24px 20px;
+  }
+
+  .portada {
+    min-height: 520px;
+    padding: 90px 20px;
+  }
+
+  .pie {
+    gap: 24px;
+    padding: 40px 20px;
+  }
+
+  .pie-columnas {
+    gap: 40px;
+  }
+
+  .titulo-portada {
+    font-size: 44px;
+  }
+
+  .titulo-grande {
+    font-size: 34px;
+  }
+
+  .titulo-zona {
+    font-size: 28px;
+  }
+
+  .titulo-medio {
+    font-size: 24px;
+  }
+
+  .grilla,
+  .grilla-2,
+  .tienda .grilla {
+    grid-template-columns: 1fr;
+  }
+
+  .tienda {
+    flex-direction: column;
+
+    .pedido {
+      position: static;
+      width: 100%;
+    }
+  }
+
+  .tarjeta-imagen {
+    height: 200px;
+  }
+
+  .avatar-0 {
+    height: 200px;
+  }
+
+  .zona-encabezado,
+  .club-fila,
+  .contacto-fila {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .indicadores {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .zona-descripcion,
+  .formulario-panel,
+  .panel-sesion {
+    width: 100%;
+  }
+
+  .contacto-panel,
+  .plan {
+    padding: 24px;
+  }
+
+  th,
+  td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}

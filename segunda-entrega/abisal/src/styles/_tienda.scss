@@ -1,0 +1,47 @@
+@use "variables" as *;
+
+.campo-cantidad {
+  width: 100px;
+}
+
+.producto-precio {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.resultado {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid $cian;
+  border-radius: 12px;
+  background: $azul-claro;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.resultado-total {
+  display: block;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid $borde;
+  color: $verde;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.tienda {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+
+  .grilla {
+    flex: 1;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pedido {
+    position: sticky;
+    top: 90px;
+    width: 300px;
+  }
+}

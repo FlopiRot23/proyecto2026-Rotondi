@@ -35,6 +35,12 @@ let Inicio = () => {
   }, [])
 
   useEffect(() => {
+    if (ubicacion.hash === '') {
+      window.scrollTo(0, 0)
+    }
+  }, [ubicacion.hash])
+
+  useEffect(() => {
     if (animales.length > 0 && ubicacion.hash !== '') {
       const seccion = document.getElementById(ubicacion.hash.replace('#', ''))
       if (seccion) {

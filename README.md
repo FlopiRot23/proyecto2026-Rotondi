@@ -60,7 +60,7 @@ Incluye fichas de especies, tienda de peluches, club y contacto.
 
 ## Cómo ejecutar la segunda entrega
 
-Necesitás tener instalado **Node.js 22** (o más nuevo) y **npm 10**.
+Necesitás tener instalado **Node.js 22 o más nuevo** y **npm 10 o más nuevo**.
 
 1. Cloná el repositorio y entrá a la carpeta del proyecto:
 

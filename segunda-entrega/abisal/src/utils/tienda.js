@@ -28,7 +28,7 @@ export let validarCantidad = (valor) => {
  * @param {string} valor - Lo que se escribió en el campo de cantidad
  * @return {boolean} true si la cantidad está bien y false si está mal
  */
-export let cantidadValida = (valor) => {
+let cantidadValida = (valor) => {
   return validarCantidad(valor) === ''
 }
 
@@ -38,7 +38,7 @@ export let cantidadValida = (valor) => {
  * @param {number} subtotal - Precio de los peluches
  * @return {number} Lo que cuesta el envío
  */
-export let calcularEnvio = (subtotal) => {
+let calcularEnvio = (subtotal) => {
   if (subtotal >= ENVIO_GRATIS_DESDE) {
     return 0
   }

@@ -58,7 +58,7 @@ let Contacto = () => {
             <h3 className="integrante-nombre">Florencia Rotondi Michelfelder</h3>
             <p className="integrante-rol">Estudiante de Ing. Informática</p>
             <p>
-              Profe de Buceo recreativo en las vacaciones, durante el año alumna de ingeniería en informática. Amante de
+              Profe de buceo recreativo en las vacaciones, durante el año alumna de ingeniería en informática. Amante de
               las profundidades.
             </p>
             <a href="mailto:flopimichel@gmail.com">flopimichel@gmail.com</a>
@@ -89,7 +89,7 @@ let Contacto = () => {
             </div>
             <div>
               <dt>Horarios</dt>
-              <dd>Lunes a Viernes, 8:00 a 17:00 h (Hora Argentina)</dd>
+              <dd>lunes a viernes, 8:00 a 17:00 h (hora argentina)</dd>
             </div>
           </dl>
         </section>

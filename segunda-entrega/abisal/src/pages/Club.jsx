@@ -288,7 +288,7 @@ let Club = () => {
   return (
     <main className="seccion">
       <div className="encabezado-centrado">
-        <p className="subtitulo">Club exclusivo</p>
+        <p className="subtitulo">Club Exclusivo</p>
         <h2 className="titulo-grande">Sumergí tu mente en conocimiento</h2>
         <p className="encabezado-texto">
           Formá parte de esta hermosa comunidad. Disfrutá de un artículo exclusivo, acceso temprano a nuevos peluches

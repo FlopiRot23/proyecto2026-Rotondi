@@ -83,7 +83,7 @@
       "perfil": [
         {
           "etiqueta": "Rango de Profundidad",
-          "valor": "0m — 110m (praderas costeras)"
+          "valor": "0m - 110m (praderas costeras)"
         },
         {
           "etiqueta": "Longitud Máxima",
@@ -120,7 +120,7 @@
       "perfil": [
         {
           "etiqueta": "Rango de Profundidad",
-          "valor": "1m — 30m (arrecifes de coral)"
+          "valor": "1m - 30m (arrecifes de coral)"
         },
         {
           "etiqueta": "Longitud Máxima",
@@ -157,7 +157,7 @@
       "perfil": [
         {
           "etiqueta": "Rango de Profundidad",
-          "valor": "200m — 800m"
+          "valor": "200m - 800m"
         },
         {
           "etiqueta": "Diámetro",
@@ -194,7 +194,7 @@
       "perfil": [
         {
           "etiqueta": "Rango de Profundidad",
-          "valor": "0m — 800m (migra a diario)"
+          "valor": "0m - 800m (migra a diario)"
         },
         {
           "etiqueta": "Longitud Máxima",
@@ -231,7 +231,7 @@
       "perfil": [
         {
           "etiqueta": "Rango de Profundidad",
-          "valor": "1.200m — 3.000m"
+          "valor": "1.200m - 3.000m"
         },
         {
           "etiqueta": "Longitud Máxima",
@@ -268,11 +268,11 @@
       "perfil": [
         {
           "etiqueta": "Rango de Profundidad",
-          "valor": "1.000m — 2.500m (Principalmente batipelágico)"
+          "valor": "1.000m - 2.500m (principalmente batipelágico)"
         },
         {
           "etiqueta": "Longitud Máxima",
-          "valor": "Hasta 13 metros (Hembras)"
+          "valor": "Hasta 13 metros (hembras)"
         },
         {
           "etiqueta": "Peso Estimado",
@@ -305,7 +305,7 @@
       "perfil": [
         {
           "etiqueta": "Rango de Profundidad",
-          "valor": "550m — 2.500m"
+          "valor": "550m - 2.500m"
         },
         {
           "etiqueta": "Longitud Máxima",
@@ -342,7 +342,7 @@
       "perfil": [
         {
           "etiqueta": "Rango de Profundidad",
-          "valor": "0m — 2.200m"
+          "valor": "0m - 2.200m"
         },
         {
           "etiqueta": "Longitud Máxima",
@@ -379,7 +379,7 @@
       "perfil": [
         {
           "etiqueta": "Rango de Profundidad",
-          "valor": "4.000m — 4.800m"
+          "valor": "4.000m - 4.800m"
         },
         {
           "etiqueta": "Longitud Máxima",
@@ -416,7 +416,7 @@
       "perfil": [
         {
           "etiqueta": "Rango de Profundidad",
-          "valor": "4.000m — 6.000m"
+          "valor": "4.000m - 6.000m"
         },
         {
           "etiqueta": "Longitud Máxima",

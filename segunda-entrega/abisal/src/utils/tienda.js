@@ -9,13 +9,18 @@ export const COSTO_ENVIO = 8
  * @return {string} El mensaje de error, o un texto vacío si la cantidad está bien
  */
 export let validarCantidad = (valor) => {
-  const numero = Number(valor)
-  if (valor === '' || isNaN(numero)) {
+  if (valor === '') {
     return 'Ingresá un número.'
   }
-  if (numero % 1 !== 0) {
+  if (valor.includes('.') || valor.includes(',')) {
     return 'La cantidad no puede tener decimales.'
   }
+  for (let i = 0; i < valor.length; i++) {
+    if (valor[i] < '0' || valor[i] > '9') {
+      return 'Ingresá solo números, sin letras ni signos.'
+    }
+  }
+  const numero = Number(valor)
   if (numero < 1 || numero > CANTIDAD_MAXIMA) {
     return 'La cantidad tiene que estar entre 1 y ' + CANTIDAD_MAXIMA + '.'
   }

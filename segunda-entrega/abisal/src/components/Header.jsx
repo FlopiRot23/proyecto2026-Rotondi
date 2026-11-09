@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { SesionContext } from '@/components/SesionContext.js'
 
 /**
@@ -22,10 +22,29 @@ let claseMenu = ({ isActive }) => {
  * @return {JSX.Element} El encabezado
  */
 let Header = () => {
-  const { sesion } = useContext(SesionContext)
-  let textoSesion = 'Ingresar'
+  const { sesion, cerrarSesion } = useContext(SesionContext)
+  const navegar = useNavigate()
+
+  /**
+   * Cierra la sesión desde el encabezado y vuelve al inicio
+   * @method salir
+   */
+  let salir = () => {
+    cerrarSesion()
+    navegar('/')
+  }
+
+  let botonSesion = (
+    <Link to="/club" className="boton-sesion">
+      Ingresar
+    </Link>
+  )
   if (sesion !== null) {
-    textoSesion = 'Mi cuenta'
+    botonSesion = (
+      <button type="button" className="boton-sesion" onClick={salir}>
+        Cerrar sesión
+      </button>
+    )
   }
 
   return (
@@ -49,9 +68,7 @@ let Header = () => {
           Contacto
         </NavLink>
       </nav>
-      <Link to="/club" className="boton-sesion">
-        {textoSesion}
-      </Link>
+      {botonSesion}
     </header>
   )
 }

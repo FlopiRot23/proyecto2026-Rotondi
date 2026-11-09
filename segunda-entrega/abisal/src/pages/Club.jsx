@@ -123,10 +123,15 @@ let Club = () => {
   const { sesion, iniciarSesion, cerrarSesion } = useContext(SesionContext)
   const navegar = useNavigate()
 
-  useEffect(() => {
+  /**
+   * Sube arriba de todo y cambia el título de la pestaña al abrir el club
+   * @method alAbrirClub
+   */
+  let alAbrirClub = () => {
     window.scrollTo(0, 0)
     document.title = 'Club Exclusivo | Abisal'
-  }, [])
+  }
+  useEffect(alAbrirClub, [])
 
   /**
    * Guarda el correo escrito y lo valida en el momento

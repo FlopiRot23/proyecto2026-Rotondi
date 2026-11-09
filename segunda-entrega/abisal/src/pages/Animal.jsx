@@ -48,7 +48,11 @@ let Animal = () => {
   const [otros, setOtros] = useState([])
   const [error, setError] = useState('')
 
-  useEffect(() => {
+  /**
+   * Sube arriba de todo y carga la ficha cada vez que cambia el id de la dirección
+   * @method alCambiarAnimal
+   */
+  let alCambiarAnimal = () => {
     window.scrollTo(0, 0)
 
     /**
@@ -78,7 +82,8 @@ let Animal = () => {
       }
     }
     cargarFicha()
-  }, [id])
+  }
+  useEffect(alCambiarAnimal, [id])
 
   if (error !== '') {
     return (

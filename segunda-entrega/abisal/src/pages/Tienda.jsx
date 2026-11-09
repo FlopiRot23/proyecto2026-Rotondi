@@ -26,7 +26,11 @@ let Tienda = () => {
   const [resultado, setResultado] = useState(null)
   const [errorCarga, setErrorCarga] = useState('')
 
-  useEffect(() => {
+  /**
+   * Sube arriba de todo, cambia el título de la pestaña y carga los peluches al abrir la tienda
+   * @method alAbrirTienda
+   */
+  let alAbrirTienda = () => {
     window.scrollTo(0, 0)
     document.title = 'Tienda de peluches | Abisal'
 
@@ -42,7 +46,8 @@ let Tienda = () => {
       }
     }
     cargarPeluches()
-  }, [])
+  }
+  useEffect(alAbrirTienda, [])
 
   /**
    * Guarda la cantidad escrita y la valida en el momento

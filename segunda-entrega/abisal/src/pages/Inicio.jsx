@@ -16,7 +16,11 @@ let Inicio = () => {
   const [error, setError] = useState('')
   const ubicacion = useLocation()
 
-  useEffect(() => {
+  /**
+   * Cambia el título de la pestaña y carga las zonas y los animales al abrir el inicio
+   * @method alAbrirInicio
+   */
+  let alAbrirInicio = () => {
     document.title = 'Abisal | Expedición por las profundidades'
 
     /**
@@ -32,22 +36,33 @@ let Inicio = () => {
       }
     }
     cargarDatos()
-  }, [])
+  }
+  useEffect(alAbrirInicio, [])
 
-  useEffect(() => {
+  /**
+   * Sube arriba de todo cuando la dirección no tiene ancla
+   * @method subirSinAncla
+   */
+  let subirSinAncla = () => {
     if (ubicacion.hash === '') {
       window.scrollTo(0, 0)
     }
-  }, [ubicacion.hash])
+  }
+  useEffect(subirSinAncla, [ubicacion.hash])
 
-  useEffect(() => {
+  /**
+   * Baja hasta la zona del ancla de la dirección cuando ya cargaron los animales
+   * @method bajarAlAncla
+   */
+  let bajarAlAncla = () => {
     if (animales.length > 0 && ubicacion.hash !== '') {
       const seccion = document.getElementById(ubicacion.hash.replace('#', ''))
       if (seccion) {
         seccion.scrollIntoView()
       }
     }
-  }, [animales, ubicacion.hash])
+  }
+  useEffect(bajarAlAncla, [animales, ubicacion.hash])
 
   /**
    * Busca los animales que viven en una zona

@@ -29,10 +29,15 @@ let mostrarRed = (red) => {
  * @return {JSX.Element} La página de contacto
  */
 let Contacto = () => {
-  useEffect(() => {
+  /**
+   * Sube arriba de todo y cambia el título de la pestaña al abrir contacto
+   * @method alAbrirContacto
+   */
+  let alAbrirContacto = () => {
     window.scrollTo(0, 0)
     document.title = 'Contacto | Abisal'
-  }, [])
+  }
+  useEffect(alAbrirContacto, [])
 
   return (
     <main className="seccion">

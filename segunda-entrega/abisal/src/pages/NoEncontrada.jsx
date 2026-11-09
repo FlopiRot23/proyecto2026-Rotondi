@@ -7,10 +7,15 @@ import { Link } from 'react-router-dom'
  * @return {JSX.Element} El aviso de página no encontrada con un link al inicio
  */
 let NoEncontrada = () => {
-  useEffect(() => {
+  /**
+   * Sube arriba de todo y cambia el título de la pestaña al abrir la página
+   * @method alAbrirPagina
+   */
+  let alAbrirPagina = () => {
     window.scrollTo(0, 0)
     document.title = 'Página no encontrada | Abisal'
-  }, [])
+  }
+  useEffect(alAbrirPagina, [])
 
   return (
     <main className="seccion">

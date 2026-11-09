@@ -1,8 +1,7 @@
-import { createContext, useState } from 'react'
+import { useState } from 'react'
+import { SesionContext } from '@/components/sesionContexto.js'
 
 const CLAVE_SESION = 'abisal-sesion'
-
-export const SesionContext = createContext(null)
 
 /**
  * Lee la sesión guardada en localStorage

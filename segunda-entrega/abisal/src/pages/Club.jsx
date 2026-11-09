@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { buscarSocio, registrarSocio } from '@/api/socios.js'
 import Button from '@/components/Button.jsx'
 import Input from '@/components/Input.jsx'
-import { SesionContext } from '@/components/SesionContext.jsx'
+import { SesionContext } from '@/components/sesionContexto.js'
 import { LARGO_MINIMO_CLAVE, validarClave, validarCorreo } from '@/utils/validaciones.js'
 
 const PLANES = [

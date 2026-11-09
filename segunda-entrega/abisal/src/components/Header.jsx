@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { SesionContext } from '@/components/SesionContext.jsx'
+import { SesionContext } from '@/components/sesionContexto.js'
 
 /**
  * Devuelve la clase del link del menú según si es la página actual

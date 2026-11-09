@@ -128,12 +128,14 @@ let Tienda = () => {
         <Input
           id={'cantidad-' + peluche.id}
           etiqueta="Cantidad"
-          tipo="number"
+          tipo="text"
           valor={cantidades[peluche.id] || ''}
           onChange={cambiarCantidad}
           error={errores[peluche.id] || ''}
           placeholder="Ej: 2"
           contenedor="campo-cantidad"
+          inputMode="numeric"
+          maxLength={3}
         />
       </Card>
     )

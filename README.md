@@ -6,9 +6,11 @@ Proyecto 2026 de la materia **Taller de Desarrollo Web**.
 
 - [Autores](#autores)
 - [Link a Github Pages](#link-a-github-pages)
-- [Link al wireframe](#link-al-wireframe)
+- [Link al Mockup](#link-al-mockup)
 - [Descripción](#descripción)
 - [Tecnologías usadas](#tecnologías-usadas)
+- [Cómo ejecutar la segunda entrega](#cómo-ejecutar-la-segunda-entrega)
+- [Vulnerabilidades](#vulnerabilidades)
 
 ## Autores
 
@@ -29,18 +31,66 @@ Incluye fichas de especies, tienda de peluches, club y contacto.
 
 ### Páginas
 
-| Página           | Archivo       |
-| ---------------- | ------------- |
-| Inicio           | index.html    |
-| Ficha de especie | animal.html   |
-| Tienda           | tienda.html   |
-| Club Exclusivo   | club.html     |
-| Contacto         | contacto.html |
+| Página           | Archivo       | Ruta en la segunda entrega |
+| ---------------- | ------------- | -------------------------- |
+| Inicio           | index.html    | `/`                        |
+| Ficha de especie | animal.html   | `/animal/:id`              |
+| Tienda           | tienda.html   | `/tienda`                  |
+| Club Exclusivo   | club.html     | `/club`                    |
+| Contacto         | contacto.html | `/contacto`                |
 
 ## Tecnologías usadas
+
+### Primera entrega
 
 - HTML5
 - CSS3
 - JavaScript
 - Google Fonts
 - Git y Github Pages
+
+### Segunda entrega
+
+- React
+- Vite
+- React Router
+- Sass
+- json-server
+- Node.js y npm
+
+## Cómo ejecutar la segunda entrega
+
+Necesitás tener instalado **Node.js 22** (o más nuevo) y **npm 10**.
+
+1. Cloná el repositorio y entrá a la carpeta del proyecto:
+
+   ```bash
+   git clone https://github.com/FlopiRot23/proyecto2026-Rotondi.git
+   cd proyecto2026-Rotondi/segunda-entrega/abisal
+   ```
+
+2. Instalá las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+3. Levantá el mock de la API. Esta terminal tiene que quedar abierta:
+
+   ```bash
+   npm run api
+   ```
+
+4. Abrí **otra terminal** en la misma carpeta y levantá el sitio:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Entrá a `http://localhost:5173` desde el navegador.
+
+> Detalle: los comandos se corren dentro de `segunda-entrega/abisal`, que es donde está el `package.json`.
+
+## Vulnerabilidades
+
+Revisé las dependencias con `npm audit` y no apareció **ninguna vulnerabilidad**: ni críticas, ni altas, ni moderadas, ni bajas.
